@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="grid-cards gc-4" style="margin-top:5rem;max-width:80rem;">
-      <div class="stat-tile"><div class="v">15+</div><div class="l">Years of Excellence</div></div>
+      <div class="stat-tile"><div class="v">25+</div><div class="l">Years of Excellence</div></div>
       <div class="stat-tile"><div class="v">150+</div><div class="l">Projects Completed</div></div>
       <div class="stat-tile"><div class="v">100+</div><div class="l">Happy Clients</div></div>
       <div class="stat-tile"><div class="v">Pan-India</div><div class="l">Project Execution</div></div>
@@ -38,24 +38,61 @@
   </div>
 </section>
 
-<!-- WHY CHOOSE -->
-<section class="section">
+<!-- TRUSTED PARTNERS -->
+<style>
+  #partners{background:linear-gradient(180deg,#f6f8fd,#fff);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  #partners .head{max-width:44rem;margin:0 auto 3.5rem;text-align:center;}
+  #partners .head .eyebrow-row{display:inline-flex;align-items:center;gap:.85rem;color:var(--primary);}
+  #partners .head .eyebrow-row::before,#partners .head .eyebrow-row::after{content:"";display:block;width:30px;height:2px;background:var(--primary);}
+  #partners .head .eyebrow{color:var(--primary);}
+  #partners h2{font-family:'Montserrat';font-weight:900;font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.15;margin-top:1rem;color:var(--foreground);}
+  #partners .sub{margin-top:1rem;color:rgba(15,23,42,.65);line-height:1.75;}
+  .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .marquee-track{display:flex;gap:1.5rem;width:max-content;animation:rk-marquee 38s linear infinite;}
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  @keyframes rk-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .partner-card{flex:0 0 auto;min-width:240px;height:120px;display:flex;align-items:center;justify-content:center;padding:1.25rem 2rem;background:#fff;border:1px solid var(--border);border-radius:.75rem;box-shadow:0 1px 2px rgba(15,23,42,.04),0 10px 30px -18px rgba(15,23,42,.12);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
+  .partner-card:hover{transform:translateY(-3px);border-color:rgba(30,42,120,.35);box-shadow:0 20px 45px -22px rgba(30,42,120,.25);}
+  .partner-logo{max-height:64px;max-width:180px;width:auto;height:auto;object-fit:contain;display:block;}
+  .partner-name{font-family:'Montserrat';font-weight:800;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);text-align:center;line-height:1.3;}
+  .partner-card .mark{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cta);margin-right:.7rem;vertical-align:middle;}
+  @media(max-width:640px){.partner-card{min-width:200px;height:104px;padding:1rem 1.25rem;}.partner-logo{max-height:52px;max-width:150px;}.partner-name{font-size:12px;}}
+</style>
+<section class="section-sm" id="partners" style="padding:5rem 0;">
   <div class="container-x">
-    <div style="max-width:48rem;margin-bottom:4rem;">
-      <span class="eyebrow">Why RK Roofing PEB</span>
-      <h2 class="h-section" style="margin-top:1rem;">Engineering excellence built on <span class="text-gradient-gold">15 years of trust</span></h2>
-      <p style="margin-top:1.25rem;color:rgba(15,23,42,.65);font-size:1.125rem;line-height:1.7;">We combine deep PEB engineering expertise with disciplined project execution to deliver industrial buildings that stand the test of time.</p>
+    <div class="head">
+      <span class="eyebrow-row"><span class="eyebrow">Trusted Partners</span></span>
+      <h2>Trusted by industry leaders across India</h2>
+      <p class="sub">Proudly associated with leading Pre-Engineered Building, structural steel, and industrial construction organizations.</p>
     </div>
-    <div class="grid-cards gc-3">
-      <div class="card-premium card-pad"><div class="icon-tile" data-icon="award" data-size="28"></div><h3 class="h-card">15+ Years Experience</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">A decade and a half of delivering industrial buildings, roofing systems and steel structures.</p></div>
-      <div class="card-premium card-pad"><div class="icon-tile" data-icon="building" data-size="28"></div><h3 class="h-card">150+ Projects Completed</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Warehouses, factories and logistics parks delivered across Karnataka, Tamil Nadu and beyond.</p></div>
-      <div class="card-premium card-pad"><div class="icon-tile" data-icon="users" data-size="28"></div><h3 class="h-card">100+ Happy Clients</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Long-term partnerships with manufacturers, logistics operators and infrastructure developers.</p></div>
-      <div class="card-premium card-pad"><div class="icon-tile" data-icon="pin" data-size="28"></div><h3 class="h-card">Pan-India Execution</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Project execution and on-site engineering teams mobilised across South India and beyond.</p></div>
-      <div class="card-premium card-pad"><div class="icon-tile" data-icon="shield" data-size="28"></div><h3 class="h-card">Safety First Approach</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">EHS-led site management, certified scaffolding, PPE and zero-compromise quality protocols.</p></div>
-      <div class="card-premium card-pad"><div class="icon-tile" data-icon="hard" data-size="28"></div><h3 class="h-card">Engineering Excellence</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">In-house PEB design, structural analysis and BIM-aligned shop drawings for every project.</p></div>
+    <div class="marquee" aria-label="Partner companies">
+      <div class="marquee-track" id="partnerTrack">
+        <div class="partner-card"><img class="partner-logo" src="https://logo.clearbit.com/kirbybuildings.com" alt="Kirby Building Systems logo" loading="lazy" onerror="this.outerHTML='&lt;span class=\'partner-name\'&gt;&lt;span class=\'mark\'&gt;&lt;/span&gt;Kirby Building Systems&lt;/span&gt;'"></div>
+        <div class="partner-card"><img class="partner-logo" src="https://logo.clearbit.com/interarchbuildings.com" alt="Interarch Building Products logo" loading="lazy" onerror="this.outerHTML='&lt;span class=\'partner-name\'&gt;&lt;span class=\'mark\'&gt;&lt;/span&gt;Interarch&lt;/span&gt;'"></div>
+        <div class="partner-card"><img class="partner-logo" src="https://logo.clearbit.com/alfapeb.com" alt="Alfa PEB Limited logo" loading="lazy" onerror="this.outerHTML='&lt;span class=\'partner-name\'&gt;&lt;span class=\'mark\'&gt;&lt;/span&gt;Alfa PEB Limited&lt;/span&gt;'"></div>
+        <div class="partner-card"><img class="partner-logo" src="https://logo.clearbit.com/fabexsteel.com" alt="Fabex Steel Structure Pvt Ltd logo" loading="lazy" onerror="this.outerHTML='&lt;span class=\'partner-name\'&gt;&lt;span class=\'mark\'&gt;&lt;/span&gt;Fabex Steel Structure&lt;/span&gt;'"></div>
+        <div class="partner-card"><img class="partner-logo" src="https://logo.clearbit.com/phenixindia.com" alt="Phenix Construction Technologies logo" loading="lazy" onerror="this.outerHTML='&lt;span class=\'partner-name\'&gt;&lt;span class=\'mark\'&gt;&lt;/span&gt;Phenix Construction Technologies&lt;/span&gt;'"></div>
+        <div class="partner-card"><img class="partner-logo" src="https://logo.clearbit.com/zamilsteel.com" alt="Zamil Construction India logo" loading="lazy" onerror="this.outerHTML='&lt;span class=\'partner-name\'&gt;&lt;span class=\'mark\'&gt;&lt;/span&gt;Zamil Construction India&lt;/span&gt;'"></div>
+      </div>
     </div>
   </div>
 </section>
+<script>
+  // Duplicate marquee items for seamless infinite loop + reveal-on-scroll for timeline cards (deferred so all sections are parsed)
+  document.addEventListener('DOMContentLoaded', function(){
+    var track=document.getElementById('partnerTrack');
+    if(track){track.innerHTML+=track.innerHTML;}
+    var cards=document.querySelectorAll('.tl-card');
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+      },{threshold:.18});
+      cards.forEach(function(c){io.observe(c);});
+    }else{cards.forEach(function(c){c.classList.add('in');});}
+  });
+</script>
+
+
 
 <!-- SERVICES -->
 <section class="section bg-accent" style="background:linear-gradient(180deg,rgba(230,237,255,.4),#fff);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
@@ -75,6 +112,40 @@
   </div>
 </section>
 
+<!-- WHY CHOOSE -->
+<section class="section">
+  <div class="container-x">
+    <div style="max-width:48rem;margin-bottom:4rem;">
+      <span class="eyebrow">Why RK Roofing PEB</span>
+      <h2 class="h-section" style="margin-top:1rem;">Engineering excellence built on <span class="text-gradient-gold">25+ years of trust</span></h2>
+      <p style="margin-top:1.25rem;color:rgba(15,23,42,.65);font-size:1.125rem;line-height:1.7;">We combine deep PEB engineering expertise with disciplined project execution to deliver industrial buildings that stand the test of time.</p>
+    </div>
+    <div class="grid-cards gc-3">
+      <div class="card-premium card-pad"><div class="icon-tile" data-icon="award" data-size="28"></div><h3 class="h-card">25+ Years of Excellence</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Over two and a half decades of delivering industrial buildings, roofing systems and steel structures with uncompromising quality.</p></div>
+      <div class="card-premium card-pad"><div class="icon-tile" data-icon="building" data-size="28"></div><h3 class="h-card">150+ Projects Completed</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Warehouses, factories and logistics parks delivered across Karnataka, Tamil Nadu and beyond.</p></div>
+      <div class="card-premium card-pad"><div class="icon-tile" data-icon="users" data-size="28"></div><h3 class="h-card">100+ Happy Clients</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Long-term partnerships with manufacturers, logistics operators and infrastructure developers.</p></div>
+      <div class="card-premium card-pad"><div class="icon-tile" data-icon="pin" data-size="28"></div><h3 class="h-card">Pan-India Execution</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">Project execution and on-site engineering teams mobilised across South India and beyond.</p></div>
+      <div class="card-premium card-pad"><div class="icon-tile" data-icon="shield" data-size="28"></div><h3 class="h-card">Safety First Approach</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">EHS-led site management, certified scaffolding, PPE and zero-compromise quality protocols.</p></div>
+      <div class="card-premium card-pad"><div class="icon-tile" data-icon="hard" data-size="28"></div><h3 class="h-card">Engineering Excellence</h3><p style="margin-top:.75rem;font-size:14px;color:rgba(15,23,42,.65);line-height:1.7;">In-house PEB design, structural analysis and BIM-aligned shop drawings for every project.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="section">
+  <div class="container-x">
+    <div style="max-width:48rem;margin-bottom:3.5rem;">
+      <span class="eyebrow">Featured Projects</span>
+      <h2 class="h-section" style="margin-top:1rem;">Industrial landmarks built across India</h2>
+    </div>
+    <div class="grid-cards gc-2" style="gap:2rem;">
+      <article class="card-premium" style="overflow:hidden;"><div class="proj-img" style="height:280px;"><img src="assets/horizon-logistics-park.jpg" alt="Horizon Logistics Park — RK Roofing PEB" loading="lazy"><div class="proj-tag">Featured</div></div><div style="padding:2rem;"><h3 style="font-family:Montserrat;font-weight:700;font-size:1.5rem;">Horizon Logistics Park</h3><p style="margin-top:.5rem;display:flex;gap:.5rem;align-items:center;font-size:14px;color:rgba(15,23,42,.6);"><span data-icon="pin" data-size="16" style="color:var(--cta);"></span> Begur, Hosur, Tamil Nadu</p><p style="margin-top:1rem;font-size:14px;color:rgba(15,23,42,.7);line-height:1.7;">Multi-block Grade-A logistics park delivered with high-bay PEB structures, insulated roofing and full cladding scope.</p><p style="margin-top:1.25rem;font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cta);">PEB Structures · Roofing &amp; Cladding · Steel Erection</p></div></article>
+      <article class="card-premium" style="overflow:hidden;"><div class="proj-img" style="height:280px;"><img src="assets/welspun-one.jpg" alt="Welspun One Pvt Ltd — RK Roofing PEB" loading="lazy"><div class="proj-tag">Featured</div></div><div style="padding:2rem;"><h3 style="font-family:Montserrat;font-weight:700;font-size:1.5rem;">Welspun One Pvt Ltd</h3><p style="margin-top:.5rem;display:flex;gap:.5rem;align-items:center;font-size:14px;color:rgba(15,23,42,.6);"><span data-icon="pin" data-size="16" style="color:var(--cta);"></span> Hosur, Tamil Nadu</p><p style="margin-top:1rem;font-size:14px;color:rgba(15,23,42,.7);line-height:1.7;">Large-format warehouse facility for one of India's leading logistics infrastructure developers.</p><p style="margin-top:1.25rem;font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cta);">Warehouse PEB · Industrial Roofing</p></div></article>
+    </div>
+    <div style="margin-top:3rem;text-align:center;"><a href="projects.html" class="btn-outline">See all 150+ projects <span data-icon="arrow" data-size="16"></span></a></div>
+  </div>
+</section>
+
 <!-- INDUSTRIES -->
 <section class="section dark-section">
   <div class="texture-grid" style="position:absolute;inset:0;opacity:.1;"></div>
@@ -83,13 +154,11 @@
       <span class="eyebrow eyebrow-gold">Industries We Serve</span>
       <h2 class="h-section" style="margin-top:1rem;color:#fff;">Engineered for India's most demanding industries</h2>
     </div>
-    <div class="grid-cards gc-4" style="gap:1rem;">
+    <div class="grid-cards gc-3" style="gap:1rem;">
       <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);transition:all .25s;"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Warehousing</div></div>
       <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Logistics</div></div>
       <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Manufacturing</div></div>
       <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Automobile</div></div>
-      <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Power</div></div>
-      <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Cement</div></div>
       <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Steel</div></div>
       <div style="border:1px solid rgba(255,255,255,.15);border-radius:.5rem;padding:1.5rem;background:rgba(255,255,255,.03);"><span data-icon="check" data-size="20" style="color:var(--cta);display:block;margin-bottom:.75rem;"></span><div style="font-family:Montserrat;font-weight:700;">Commercial Infrastructure</div></div>
     </div>
@@ -146,77 +215,6 @@
     </div>
   </div>
 </section>
-
-<!-- FEATURED PROJECTS -->
-<section class="section">
-  <div class="container-x">
-    <div style="max-width:48rem;margin-bottom:3.5rem;">
-      <span class="eyebrow">Featured Projects</span>
-      <h2 class="h-section" style="margin-top:1rem;">Industrial landmarks built across India</h2>
-    </div>
-    <div class="grid-cards gc-2" style="gap:2rem;">
-      <article class="card-premium" style="overflow:hidden;"><div class="proj-img" style="height:280px;"><img src="assets/horizon-logistics-park.jpg" alt="Horizon Logistics Park — RK Roofing PEB" loading="lazy"><div class="proj-tag">Featured</div></div><div style="padding:2rem;"><h3 style="font-family:Montserrat;font-weight:700;font-size:1.5rem;">Horizon Logistics Park</h3><p style="margin-top:.5rem;display:flex;gap:.5rem;align-items:center;font-size:14px;color:rgba(15,23,42,.6);"><span data-icon="pin" data-size="16" style="color:var(--cta);"></span> Begur, Hosur, Tamil Nadu</p><p style="margin-top:1rem;font-size:14px;color:rgba(15,23,42,.7);line-height:1.7;">Multi-block Grade-A logistics park delivered with high-bay PEB structures, insulated roofing and full cladding scope.</p><p style="margin-top:1.25rem;font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cta);">PEB Structures · Roofing &amp; Cladding · Steel Erection</p></div></article>
-      <article class="card-premium" style="overflow:hidden;"><div class="proj-img" style="height:280px;"><img src="assets/welspun-one.jpg" alt="Welspun One Pvt Ltd — RK Roofing PEB" loading="lazy"><div class="proj-tag">Featured</div></div><div style="padding:2rem;"><h3 style="font-family:Montserrat;font-weight:700;font-size:1.5rem;">Welspun One Pvt Ltd</h3><p style="margin-top:.5rem;display:flex;gap:.5rem;align-items:center;font-size:14px;color:rgba(15,23,42,.6);"><span data-icon="pin" data-size="16" style="color:var(--cta);"></span> Hosur, Tamil Nadu</p><p style="margin-top:1rem;font-size:14px;color:rgba(15,23,42,.7);line-height:1.7;">Large-format warehouse facility for one of India's leading logistics infrastructure developers.</p><p style="margin-top:1.25rem;font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cta);">Warehouse PEB · Industrial Roofing</p></div></article>
-    </div>
-    <div style="margin-top:3rem;text-align:center;"><a href="projects.html" class="btn-outline">See all 150+ projects <span data-icon="arrow" data-size="16"></span></a></div>
-  </div>
-</section>
-
-<!-- TRUSTED PARTNERS -->
-<style>
-  #partners{background:linear-gradient(180deg,#f6f8fd,#fff);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-  #partners .head{max-width:44rem;margin:0 auto 3.5rem;text-align:center;}
-  #partners .head .eyebrow-row{display:inline-flex;align-items:center;gap:.85rem;color:var(--primary);}
-  #partners .head .eyebrow-row::before,#partners .head .eyebrow-row::after{content:"";display:block;width:30px;height:2px;background:var(--primary);}
-  #partners .head .eyebrow{color:var(--primary);}
-  #partners h2{font-family:'Montserrat';font-weight:900;font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.15;margin-top:1rem;color:var(--foreground);}
-  #partners .sub{margin-top:1rem;color:rgba(15,23,42,.65);line-height:1.75;}
-  .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-  .marquee-track{display:flex;gap:1.5rem;width:max-content;animation:rk-marquee 38s linear infinite;}
-  .marquee:hover .marquee-track{animation-play-state:paused;}
-  @keyframes rk-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .partner-card{flex:0 0 auto;min-width:280px;height:110px;display:flex;align-items:center;justify-content:center;padding:1.25rem 2rem;background:#fff;border:1px solid var(--border);border-radius:.75rem;box-shadow:0 1px 2px rgba(15,23,42,.04),0 10px 30px -18px rgba(15,23,42,.12);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
-  .partner-card:hover{transform:translateY(-3px);border-color:rgba(30,42,120,.35);box-shadow:0 20px 45px -22px rgba(30,42,120,.25);}
-  .partner-name{font-family:'Montserrat';font-weight:800;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);text-align:center;line-height:1.3;}
-  .partner-card .mark{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cta);margin-right:.7rem;vertical-align:middle;}
-  @media(max-width:640px){.partner-card{min-width:230px;height:96px;padding:1rem 1.25rem;}.partner-name{font-size:12px;}}
-</style>
-<section class="section-sm" id="partners" style="padding:5rem 0;">
-  <div class="container-x">
-    <div class="head">
-      <span class="eyebrow-row"><span class="eyebrow">Trusted Partners</span></span>
-      <h2>Trusted by industry leaders across India</h2>
-      <p class="sub">Proudly associated with leading Pre-Engineered Building, structural steel, and industrial construction organizations.</p>
-    </div>
-    <div class="marquee" aria-label="Partner companies">
-      <div class="marquee-track" id="partnerTrack">
-        <div class="partner-card"><span class="partner-name"><span class="mark"></span>Alfa PEB Limited</span></div>
-        <div class="partner-card"><span class="partner-name"><span class="mark"></span>Fabex Steel Structure Pvt Ltd</span></div>
-        <div class="partner-card"><span class="partner-name"><span class="mark"></span>Phenix Construction Technologies</span></div>
-        <div class="partner-card"><span class="partner-name"><span class="mark"></span>Zamil Construction India Pvt Ltd</span></div>
-        <div class="partner-card"><span class="partner-name"><span class="mark"></span>Kirby Building Systems</span></div>
-        <div class="partner-card"><span class="partner-name"><span class="mark"></span>Interarch</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-<script>
-  // Duplicate marquee items for seamless infinite loop
-  (function(){
-    var track=document.getElementById('partnerTrack');
-    if(track){track.innerHTML+=track.innerHTML;}
-    // Reveal-on-scroll for timeline cards
-    var cards=document.querySelectorAll('.tl-card');
-    if('IntersectionObserver' in window){
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-      },{threshold:.18});
-      cards.forEach(function(c){io.observe(c);});
-    }else{cards.forEach(function(c){c.classList.add('in');});}
-  })();
-</script>
-
-
 
 <!-- CTA -->
 <section class="section" style="background:linear-gradient(135deg,var(--accent),#fff,var(--accent));position:relative;">
