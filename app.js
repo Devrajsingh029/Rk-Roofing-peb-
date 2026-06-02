@@ -73,7 +73,7 @@
             <div class="logo" style="background:#fff;color:var(--cta);">RK</div>
             <div><span class="b1" style="color:#fff;">RK Roofing</span><span class="b2" style="color:#a9bff2;">PEB Pvt Ltd</span></div>
           </a>
-          <p style="font-size:14px;color:rgba(213,225,255,.8);line-height:1.7;">Bangalore's trusted partner for premium PEB roofing, industrial steel structures, and warehouse construction across India.</p>
+          <p style="font-size:14px;color:rgba(213,225,255,.8);line-height:1.7;">Trusted partner for premium PEB roofing, industrial steel structures, and warehouse construction across India.</p>
         </div>
         <div><h4>Navigate</h4><ul>
           <li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li>
