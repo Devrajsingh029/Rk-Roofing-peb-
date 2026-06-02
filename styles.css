@@ -26,24 +26,38 @@ a[style*="--cta"]{color:var(--cta-text)!important}
 /* === Heading hierarchy: footer columns are h3 (was h4) === */
 .site-footer h3{font-family:'Montserrat';font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:#fff;margin:0 0 1.25rem 0}
 
-/* ===== Mobile UI fixes (do not affect desktop) ===== */
+
+/* ===== Mobile UI fixes v2 (do not affect desktop >=1024px) ===== */
 .site-header{padding-top:env(safe-area-inset-top,0)}
-section[id],h1[id],h2[id],h3[id],[data-anchor]{scroll-margin-top:96px}
+section[id],h1[id],h2[id],h3[id],[data-anchor],[id]{scroll-margin-top:100px}
 
-/* Industries grid: 2 cols on mobile, restore 3 cols on desktop */
-.industries-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-.industries-grid > *{display:flex;flex-direction:column;justify-content:flex-start}
-@media(min-width:1024px){.industries-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+/* Industries grid: 2 cols on mobile, 3 on desktop */
+.industries-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:1rem!important}
+@media(min-width:1024px){.industries-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:1.5rem!important}}
 
-/* Hero / navbar overlap fixes on mobile + small tablets */
-@media(max-width:1024px){
-  main > section:first-of-type{align-items:flex-start!important;min-height:auto!important}
-  main > section:first-of-type > .container-x{padding-top:7rem!important;padding-bottom:3.5rem!important}
-  section.gradient-hero,section[style*="margin-top:-80px"]{padding-top:11rem!important}
+@media (max-width:1023px){
+  /* Force main to clear the fixed 80px header on every page */
+  main#main-content{padding-top:80px!important}
+  /* Hero sections that pull up under the header: cancel the negative margin on mobile */
+  main > section:first-of-type{margin-top:0!important;min-height:auto!important;align-items:flex-start!important}
+  /* Trim the giant inline 10rem hero padding so content fits the viewport */
+  main > section:first-of-type > .container-x{padding-top:3rem!important;padding-bottom:3rem!important}
+  /* Hero typography fits small screens */
+  .h-display{font-size:clamp(1.9rem,7vw,2.5rem)!important;line-height:1.15!important}
+  .h-section{font-size:clamp(1.5rem,6vw,2rem)!important}
+  /* Hero stat tiles: 2 cols, tighter */
+  main > section:first-of-type .grid-cards.gc-4{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.75rem!important;margin-top:2.5rem!important}
+  .stat-tile{padding:1rem 1rem!important}
+  /* CTA buttons stack full-width */
+  .cta-row{display:flex;flex-direction:column;gap:.75rem;align-items:stretch}
+  .cta-row a{width:100%;justify-content:center}
+  /* Section padding reduced */
+  .section{padding:3.5rem 0!important}
+  .section-sm{padding:2.5rem 0!important}
 }
 
-/* About page: shrink "25+ years" overlay on mobile so the image stays visible */
-@media(max-width:640px){
+/* About page: shrink overlay badges on small phones so the photo stays visible */
+@media (max-width:640px){
   #story .badge-years{min-width:0!important;max-width:58%!important;padding:.65rem .85rem!important;bottom:.85rem!important;right:.85rem!important;border-radius:.75rem!important}
   #story .badge-years .years{font-size:19px!important;margin-top:.25rem!important}
   #story .badge-years .sub{font-size:10px!important;margin-top:.2rem!important;line-height:1.4!important}
