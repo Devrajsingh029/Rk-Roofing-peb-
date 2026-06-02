@@ -24,15 +24,15 @@ function renderFooter(){return`<footer class="site-footer">
           </a>
           <p style="font-size:14px;color:rgba(213,225,255,.8);line-height:1.7;">Trusted partner for premium PEB roofing, industrial steel structures, and warehouse construction across India.</p>
         </div>
-        <div><h4>Navigate</h4><ul>
+        <div><h3>Navigate</h3><ul>
           <li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li>
         </ul></div>
-        <div><h4>Services</h4><ul>
+        <div><h3>Services</h3><ul>
           <li>PEB Construction</li><li>Industrial Roofing</li><li>Structural Steel Erection</li>
           <li>Warehouse Construction</li><li>Cladding Solutions</li>
         </ul></div>
-        <div><h4>Contact</h4><ul>
+        <div><h3>Contact</h3><ul>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('phone').replace('width="24" height="24"','width="16" height="16"')}</span><a href="tel:+919880691046">+91 98806 91046</a></li>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('mail').replace('width="24" height="24"','width="16" height="16"')}</span><a href="mailto:info@rkroofingpeb.com">info@rkroofingpeb.com</a></li>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('pin').replace('width="24" height="24"','width="16" height="16"')}</span><span>Bangalore, Karnataka, India</span></li>
