@@ -25,3 +25,32 @@ a[style*="--cta"]{color:var(--cta-text)!important}
 #partners .partner-card{contain:layout paint}
 /* === Heading hierarchy: footer columns are h3 (was h4) === */
 .site-footer h3{font-family:'Montserrat';font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:#fff;margin:0 0 1.25rem 0}
+
+/* ===== Mobile UI fixes (do not affect desktop) ===== */
+.site-header{padding-top:env(safe-area-inset-top,0)}
+section[id],h1[id],h2[id],h3[id],[data-anchor]{scroll-margin-top:96px}
+
+/* Industries grid: 2 cols on mobile, restore 3 cols on desktop */
+.industries-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.industries-grid > *{display:flex;flex-direction:column;justify-content:flex-start}
+@media(min-width:1024px){.industries-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+
+/* Hero / navbar overlap fixes on mobile + small tablets */
+@media(max-width:1024px){
+  main > section:first-of-type{align-items:flex-start!important;min-height:auto!important}
+  main > section:first-of-type > .container-x{padding-top:7rem!important;padding-bottom:3.5rem!important}
+  section.gradient-hero,section[style*="margin-top:-80px"]{padding-top:11rem!important}
+}
+
+/* About page: shrink "25+ years" overlay on mobile so the image stays visible */
+@media(max-width:640px){
+  #story .badge-years{min-width:0!important;max-width:58%!important;padding:.65rem .85rem!important;bottom:.85rem!important;right:.85rem!important;border-radius:.75rem!important}
+  #story .badge-years .years{font-size:19px!important;margin-top:.25rem!important}
+  #story .badge-years .sub{font-size:10px!important;margin-top:.2rem!important;line-height:1.4!important}
+  #story .badge-years .top{font-size:8.5px!important;gap:.35rem!important}
+  #story .badge-years .top .dot{width:18px!important;height:18px!important}
+  #story .badge-projects{padding:.55rem .75rem!important;top:.85rem!important;left:.85rem!important}
+  #story .badge-projects .v{font-size:16px!important}
+  #story .badge-projects .l{font-size:8px!important}
+  #story .badge-projects .ic{width:30px!important;height:30px!important}
+}
