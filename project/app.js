@@ -35,7 +35,7 @@ function renderFooter(){return`<footer class="site-footer">
         <div><h3>Contact</h3><ul>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('phone').replace('width="24" height="24"','width="16" height="16"')}</span><a href="tel:+919880691046">+91 98806 91046</a></li>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('mail').replace('width="24" height="24"','width="16" height="16"')}</span><a href="mailto:rkroofingpeb@gmail.com">rkroofingpeb@gmail.com</a></li>
-          <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('pin').replace('width="24" height="24"','width="16" height="16"')}</span><span>Bangalore, Karnataka, India</span></li>
+          <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('pin').replace('width="24" height="24"','width="16" height="16"')}</span><span>RK Roofing PEB Pvt Ltd<br>217, JK Dewasi Complex,<br>Attur Main Road, Yelahanka New Town,<br>Bengaluru, Karnataka 560064, India</span></li>
         </ul></div>
       </div>
       <div class="container-x bottom">

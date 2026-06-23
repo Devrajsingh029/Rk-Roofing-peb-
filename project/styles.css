@@ -25,3 +25,24 @@ a[style*="--cta"]{color:var(--cta-text)!important}
 #partners .partner-card{contain:layout paint}
 /* === Heading hierarchy: footer columns are h3 (was h4) === */
 .site-footer h3{font-family:'Montserrat';font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:#fff;margin:0 0 1.25rem 0}
+
+/* --- Responsive safety patch --- */
+img,svg,video,canvas,iframe{max-width:100%}
+.container-x{width:100%}
+.partner-card .partner-logo{max-width:200px;max-height:96px;width:auto;height:auto;object-fit:contain;margin:0 auto}
+#partners .partner-card{padding:.5rem .75rem!important}
+@media (max-width:640px){
+  .partner-card{min-width:180px!important;height:96px!important;padding:.4rem .6rem!important}
+  .partner-card .partner-logo{max-width:160px;max-height:78px}
+  .marquee-track{gap:1rem!important}
+}
+@media (max-width:480px){
+  .container-x{padding-left:1rem!important;padding-right:1rem!important}
+  .partner-card{min-width:160px!important;height:88px!important;padding:.35rem .5rem!important}
+  .partner-card .partner-logo{max-width:140px;max-height:70px}
+}
+@media (max-width:380px){
+  .h-display{font-size:1.7rem!important;line-height:1.15!important}
+  .h-section{font-size:1.35rem!important}
+  .btn-cta,.btn-outline,.btn-outline-light{font-size:10px!important;padding:.75rem 1rem!important;letter-spacing:.14em!important}
+}
