@@ -125,6 +125,17 @@ const fbtns=document.querySelectorAll('.filter-btn');if(fbtns.length){fbtns.forE
     right.insertBefore(wrap.firstChild, right.firstChild);
   }
 
+  function injectMobileNavSocials(){
+    const mn = document.getElementById('mobile-nav');
+    if(!mn || mn.querySelector('.mn-socials')) return;
+    const keys=['maps','facebook','instagram','youtube'];
+    const html = '<div class="mn-socials" role="group" aria-label="Social media">' + keys.map(k=>{
+      const s=SOCIAL[k];
+      return '<a class="mn-social" href="'+s.href+'"'+newTab()+' aria-label="'+s.label+'" title="'+s.label+'">'+s.svg+'</a>';
+    }).join('') + '</div>';
+    mn.insertAdjacentHTML('beforeend', html);
+  }
+
   function injectFooterConnect(){
     const footer = document.querySelector('.site-footer .row');
     if(!footer) return;
@@ -159,6 +170,7 @@ const fbtns=document.querySelectorAll('.filter-btn');if(fbtns.length){fbtns.forE
 
   function init(){
     injectHeaderSocials();
+    injectMobileNavSocials();
     injectFooterConnect();
     injectFloating();
     injectContactExtras();

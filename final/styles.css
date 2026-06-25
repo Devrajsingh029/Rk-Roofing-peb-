@@ -67,3 +67,44 @@ img,svg,video,canvas,iframe{max-width:100%}
 .rk-float-instagram{background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)}
 .rk-float-youtube{background:#FF0000}
 @media(max-width:480px){.rk-float-btn{width:46px;height:46px}}
+
+/* === Responsive improvements (v2) === */
+/* Industries We Serve — always 2-col grid (1-col only as last resort) */
+.industries-grid{display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.industries-grid .industry-card{min-width:0;display:flex;flex-direction:column;height:100%;transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.industries-grid .industry-card:hover{transform:translateY(-3px);border-color:rgba(234,120,51,.55) !important;background:rgba(255,255,255,.07) !important}
+.industries-grid .industry-card > div{font-size:clamp(.95rem,2.2vw,1.0625rem);line-height:1.35;word-wrap:break-word;overflow-wrap:anywhere}
+@media (max-width:430px){.industries-grid{gap:.625rem}.industries-grid .industry-card{padding:1rem !important}.industries-grid .industry-card > div{font-size:.875rem}}
+@media (max-width:340px){.industries-grid .industry-card{padding:.75rem !important}.industries-grid .industry-card > div{font-size:.8125rem}}
+@media (max-width:300px){.industries-grid{grid-template-columns:1fr}}
+
+/* Mobile navigation socials */
+.mobile-nav .mn-socials{display:flex;justify-content:center;align-items:center;gap:.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);flex-wrap:nowrap}
+.mobile-nav .mn-social{width:44px;height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;background:var(--muted);color:var(--foreground);border:1px solid var(--border);transition:all .25s}
+.mobile-nav .mn-social:hover,.mobile-nav .mn-social:focus-visible{background:linear-gradient(135deg,var(--cta),var(--gold));color:#fff;border-color:transparent;transform:translateY(-2px)}
+
+/* Footer: center social row on mobile */
+@media (max-width:767px){
+  .footer-connect{text-align:center}
+  .footer-connect .social-row{justify-content:center}
+  .site-footer .bottom{text-align:center}
+}
+
+/* Ensure mobile nav max-height accounts for shorter scrolled header */
+@media (max-width:1023px){.mobile-nav{max-height:calc(100vh - 68px)}}
+
+/* Touch target safety: header CTA + menu toggle */
+.menu-toggle{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+
+/* Prevent horizontal scroll site-wide */
+html,body{overflow-x:hidden;max-width:100vw}
+
+/* Stronger overflow safety for images */
+img,svg,video{max-width:100%;height:auto}
+
+/* Header right cluster: prevent overflow squeeze on small screens */
+@media (max-width:380px){
+  .site-header .brand .b2{display:none}
+  .site-header .brand .logo{width:36px;height:36px;font-size:12px}
+  .site-header .brand .b1{font-size:12px}
+}
