@@ -46,3 +46,24 @@ img,svg,video,canvas,iframe{max-width:100%}
   .h-section{font-size:1.35rem!important}
   .btn-cta,.btn-outline,.btn-outline-light{font-size:10px!important;padding:.75rem 1rem!important;letter-spacing:.14em!important}
 }
+
+/* === RK Social additions === */
+.hdr-socials{display:none;align-items:center;gap:.4rem;margin-right:.25rem}
+@media(min-width:768px){.hdr-socials{display:inline-flex}}
+.hdr-social{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:.375rem;color:var(--foreground);opacity:.75;transition:all .25s}
+.hdr-social:hover{opacity:1;color:var(--cta);background:rgba(234,120,51,.08)}
+.footer-connect h3{font-family:'Montserrat';font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.28em;color:#fff;margin:0 0 1rem}
+.social-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.social-row .social-link{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.12);transition:all .25s}
+.social-row .social-link:hover{background:linear-gradient(135deg,var(--cta),var(--gold));border-color:transparent;color:#fff;transform:translateY(-2px)}
+.social-row-lg{gap:.75rem}
+.social-link-lg{width:auto !important;height:auto !important;padding:.65rem 1rem;gap:.55rem;background:var(--muted) !important;color:var(--foreground) !important;border:1px solid var(--border) !important;border-radius:9999px !important;font-family:'Montserrat';font-weight:600;font-size:13px;letter-spacing:.04em}
+.social-link-lg:hover{background:linear-gradient(90deg,var(--cta),var(--gold)) !important;color:#fff !important;border-color:transparent !important}
+.rk-float-actions{position:fixed;right:1rem;bottom:1rem;z-index:60;display:flex;flex-direction:column;gap:.6rem}
+@media(min-width:768px){.rk-float-actions{right:1.5rem;bottom:1.5rem;gap:.7rem}}
+.rk-float-btn{width:52px;height:52px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 28px -10px rgba(15,23,42,.45);transition:transform .25s, box-shadow .25s;}
+.rk-float-btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 18px 36px -10px rgba(15,23,42,.55)}
+.rk-float-whatsapp{background:#25D366}
+.rk-float-instagram{background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)}
+.rk-float-youtube{background:#FF0000}
+@media(max-width:480px){.rk-float-btn{width:46px;height:46px}}
