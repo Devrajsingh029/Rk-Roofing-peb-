@@ -48,9 +48,9 @@ img,svg,video,canvas,iframe{max-width:100%}
 }
 
 /* === RK Social additions === */
-.hdr-socials{display:none;align-items:center;gap:.4rem;margin-right:.25rem}
-@media(min-width:768px){.hdr-socials{display:inline-flex}}
-.hdr-social{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:.375rem;color:var(--foreground);opacity:.75;transition:all .25s}
+.hdr-socials{display:inline-flex;align-items:center;gap:.4rem;margin-right:.25rem}
+@media(max-width:480px){.hdr-socials{gap:.2rem;margin-right:.15rem}.hdr-socials .hdr-social{width:30px;height:30px}.hdr-socials .hdr-social svg{width:18px;height:18px}}
+.hdr-social{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:.375rem;color:var(--foreground);opacity:.85;transition:all .25s}
 .hdr-social:hover{opacity:1;color:var(--cta);background:rgba(234,120,51,.08)}
 .footer-connect h3{font-family:'Montserrat';font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.28em;color:#fff;margin:0 0 1rem}
 .social-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
@@ -108,3 +108,5 @@ img,svg,video{max-width:100%;height:auto}
   .site-header .brand .logo{width:36px;height:36px;font-size:12px}
   .site-header .brand .b1{font-size:12px}
 }
+
+.brand-logo-img{height:56px;width:auto;max-width:220px;object-fit:contain;display:block}@media(max-width:640px){.brand-logo-img{height:44px;max-width:170px}}.brand-logo-img--footer{height:72px;max-width:260px;background:rgba(255,255,255,.06);padding:.4rem .6rem;border-radius:.5rem}

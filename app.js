@@ -3,8 +3,7 @@ window.RKIcon=icon;const NAV=[{href:'index.html',label:'Home',match:['','index.h
 function renderHeader(){const cur=currentPage();const links=NAV.map(n=>`<a href="${n.href}" class="${n.match.includes(cur)?'active':''}">${n.label}</a>`).join('');return`<header class="site-header" id="site-header">
       <div class="container-x row">
         <a href="index.html" class="brand" aria-label="RK Roofing PEB Home">
-          <div class="logo">RK</div>
-          <div><span class="b1">RK Roofing PEB</span><span class="b2">Pvt Ltd · Bangalore</span></div>
+          <img src="assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img" width="180" height="60" decoding="async"/>
         </a>
         <nav class="nav" aria-label="Main">${links}</nav>
         <div style="display:flex;align-items:center;gap:.75rem;">
@@ -19,8 +18,7 @@ function renderFooter(){return`<footer class="site-footer">
       <div class="container-x row">
         <div>
           <a href="index.html" class="brand" style="margin-bottom:1.25rem;">
-            <div class="logo" style="background:#fff;color:var(--cta);">RK</div>
-            <div><span class="b1" style="color:#fff;">RK Roofing</span><span class="b2" style="color:#a9bff2;">PEB Pvt Ltd</span></div>
+            <img src="assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img brand-logo-img--footer" width="200" height="70" loading="lazy" decoding="async"/>
           </a>
           <p style="font-size:14px;color:rgba(213,225,255,.8);line-height:1.7;">Trusted partner for premium PEB roofing, industrial steel structures, and warehouse construction across India.</p>
         </div>
@@ -33,7 +31,7 @@ function renderFooter(){return`<footer class="site-footer">
           <li>Warehouse Construction</li><li>Cladding Solutions</li>
         </ul></div>
         <div><h3>Contact</h3><ul>
-          <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('phone').replace('width="24" height="24"','width="16" height="16"')}</span><a href="tel:+919880691046">+91 98806 91046</a></li>
+          <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('phone').replace('width="24" height="24"','width="16" height="16"')}</span><a href="tel:+919845770392">+91 98457 70392</a></li>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('mail').replace('width="24" height="24"','width="16" height="16"')}</span><a href="mailto:rkroofingpeb@gmail.com">rkroofingpeb@gmail.com</a></li>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('pin').replace('width="24" height="24"','width="16" height="16"')}</span><span>RK Roofing PEB Pvt Ltd<br>217, JK Dewasi Complex,<br>Attur Main Road, Yelahanka New Town,<br>Bengaluru, Karnataka 560064, India</span></li>
         </ul></div>
@@ -52,20 +50,20 @@ const fbtns=document.querySelectorAll('.filter-btn');if(fbtns.length){fbtns.forE
   const SOCIAL = {
     website:  {label:'Website',    href:'https://rkroofingpeb.com', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>'},
     maps:     {label:'Google Maps',href:'https://maps.app.goo.gl/27NDgWwC5K7pQAsF6', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 7-8 13-8 13s-8-6-8-13a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>'},
-    facebook: {label:'Facebook',   href:'https://www.facebook.com/rkroofingpeb', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>'},
+    facebook: {label:'Facebook',   href:'https://www.facebook.com/profile.php?id=61591279499337', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>'},
     instagram:{label:'Instagram',  href:'https://www.instagram.com/rkroofingpeb', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>'},
     youtube:  {label:'YouTube',    href:'https://www.youtube.com/@rkroofingpeb', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>'},
-    whatsapp: {label:'WhatsApp',   href:'https://wa.me/919880691046', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6a11.9 11.9 0 0 0 5.7 1.5h.01c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.5zM12 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 18.3-5c0 5.4-4.4 9.8-9.9 9.8zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5c-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.2-.7.2-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>'}
+    whatsapp: {label:'WhatsApp',   href:'https://wa.me/919845770392', svg:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6a11.9 11.9 0 0 0 5.7 1.5h.01c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.5zM12 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 18.3-5c0 5.4-4.4 9.8-9.9 9.8zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5c-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.2-.7.2-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>'}
   };
   window.RKSocial = SOCIAL;
 
   function newTab(){return ' target="_blank" rel="noopener noreferrer"';}
 
   function buildHeaderSocials(){
-    const keys=['facebook','instagram','youtube'];
+    const keys=['facebook','instagram','youtube','maps'];
     return '<div class="hdr-socials">' + keys.map(k=>{
       const s=SOCIAL[k];
-      return '<a class="hdr-social" href="'+s.href+'"'+newTab()+' aria-label="'+s.label+'">'+s.svg+'</a>';
+      return '<a class="hdr-social" href="'+s.href+'"'+newTab()+' aria-label="'+s.label+'" title="'+s.label+'">'+s.svg+'</a>';
     }).join('') + '</div>';
   }
 
@@ -158,7 +156,7 @@ const fbtns=document.querySelectorAll('.filter-btn');if(fbtns.length){fbtns.forE
         const data = JSON.parse(s.textContent);
         const types = Array.isArray(data['@type'])?data['@type']:[data['@type']];
         if(types && (types.includes('Organization')||types.includes('GeneralContractor')||types.includes('LocalBusiness'))){
-          const want = ['https://rkroofingpeb.com','https://www.facebook.com/rkroofingpeb','https://www.instagram.com/rkroofingpeb','https://www.youtube.com/@rkroofingpeb'];
+          const want = ['https://rkroofingpeb.com','https://www.facebook.com/profile.php?id=61591279499337','https://www.instagram.com/rkroofingpeb','https://www.youtube.com/@rkroofingpeb'];
           const cur = Array.isArray(data.sameAs)?data.sameAs:[];
           const merged = Array.from(new Set(cur.concat(want)));
           data.sameAs = merged;
