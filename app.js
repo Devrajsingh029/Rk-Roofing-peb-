@@ -3,7 +3,7 @@ window.RKIcon=icon;const NAV=[{href:'index.html',label:'Home',match:['','index.h
 function renderHeader(){const cur=currentPage();const links=NAV.map(n=>`<a href="${n.href}" class="${n.match.includes(cur)?'active':''}">${n.label}</a>`).join('');return`<header class="site-header" id="site-header">
       <div class="container-x row">
         <a href="index.html" class="brand" aria-label="RK Roofing PEB Home">
-          <img src="assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img" width="180" height="60" decoding="async"/>
+          <img src="assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img" width="95" height="64" decoding="async"/>
         </a>
         <nav class="nav" aria-label="Main">${links}</nav>
         <div style="display:flex;align-items:center;gap:.75rem;">
@@ -18,7 +18,7 @@ function renderFooter(){return`<footer class="site-footer">
       <div class="container-x row">
         <div>
           <a href="index.html" class="brand" style="margin-bottom:1.25rem;">
-            <img src="assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img brand-logo-img--footer" width="200" height="70" loading="lazy" decoding="async"/>
+            <img src="assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img brand-logo-img--footer" width="106" height="72" loading="lazy" decoding="async"/>
           </a>
           <p style="font-size:14px;color:rgba(213,225,255,.8);line-height:1.7;">Trusted partner for premium PEB roofing, industrial steel structures, and warehouse construction across India.</p>
         </div>
@@ -76,7 +76,7 @@ const fbtns=document.querySelectorAll('.filter-btn');if(fbtns.length){fbtns.forE
   }
 
   function buildFloating(){
-    const keys=['youtube','instagram','whatsapp'];
+    const keys=['facebook','youtube','instagram','whatsapp'];
     return '<div class="rk-float-actions" aria-label="Quick contact">' + keys.map(k=>{
       const s=SOCIAL[k];
       return '<a class="rk-float-btn rk-float-'+k+'" href="'+s.href+'"'+newTab()+' aria-label="'+s.label+'" title="'+s.label+'">'+s.svg+'</a>';
