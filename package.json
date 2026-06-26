@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 8080",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "build": "vite build && node copy-static.mjs",
+    "build:dev": "vite build --mode development && node copy-static.mjs",
     "preview": "vite preview --host 0.0.0.0 --port 8080",
-    "deploy": "vite build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
     "vite": "^7.1.0",
