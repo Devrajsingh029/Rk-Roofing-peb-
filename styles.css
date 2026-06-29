@@ -187,4 +187,94 @@ main p {
   text-justify: inter-word;
 }
 
-
+/* ===== DESKTOP PROPORTIONAL SCALING (screens wider than 1440px) ===== */
+@media (min-width: 1440px) {
+  .container-x {
+    max-width: 1500px !important;
+    width: min(92vw, 1500px) !important;
+    margin: 0 auto !important;
+    padding-left: 3.5rem !important;
+    padding-right: 3.5rem !important;
+  }
+  
+  /* Headings & Text */
+  .h-display {
+    font-size: clamp(3rem, 5.5vw, 5.25rem) !important; /* ~80px max on large desktop */
+  }
+  .h-section {
+    font-size: clamp(2.25rem, 4vw, 3.5rem) !important;
+  }
+  .h-card {
+    font-size: 1.45rem !important;
+  }
+  body, p, ul, ol, td, .download-card .dl-desc, .career-card .cc-desc {
+    font-size: 16px !important; /* increased by 15-20% */
+  }
+  
+  /* Hero Description */
+  main#main-content .gradient-hero p[style*="font-size:1.125rem"],
+  main#main-content .gradient-hero p.animate-fade-in {
+    font-size: 1.35rem !important; /* ~21px */
+    line-height: 1.8 !important;
+  }
+  
+  /* Header & Navigation */
+  .site-header .row {
+    height: 96px !important;
+  }
+  .brand-logo-img {
+    height: 76px !important;
+  }
+  .nav {
+    gap: 3rem !important;
+  }
+  .nav a {
+    font-size: 16.5px !important;
+  }
+  main {
+    padding-top: 96px !important;
+  }
+  
+  /* Buttons */
+  .btn-cta, .btn-outline, .btn-outline-light {
+    padding: 1.15rem 2.75rem !important;
+    font-size: 12.5px !important;
+  }
+  
+  /* Statistics cards/tiles */
+  .stat-tile {
+    padding: 1.5rem 1.85rem !important;
+  }
+  .stat-tile .v {
+    font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
+  }
+  .stat-tile .l {
+    font-size: 12px !important;
+  }
+  .stat-card {
+    padding: 2rem !important;
+  }
+  .stat-v {
+    font-size: clamp(2.25rem, 3.5vw, 3rem) !important;
+  }
+  .stat-l {
+    font-size: 12px !important;
+  }
+  
+  /* Cards & Layout Breathing Room */
+  .grid-cards {
+    gap: 2rem !important;
+  }
+  .card-pad {
+    padding: 2.5rem !important;
+  }
+  .icon-tile {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .icon-tile svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
