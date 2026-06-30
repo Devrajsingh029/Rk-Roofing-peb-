@@ -190,31 +190,31 @@ main p {
 /* ===== DESKTOP PROPORTIONAL SCALING (screens wider than 1440px) ===== */
 @media (min-width: 1440px) {
   .container-x {
-    max-width: 1500px !important;
-    width: min(92vw, 1500px) !important;
+    max-width: 1680px !important;
+    width: min(94vw, 1680px) !important;
     margin: 0 auto !important;
-    padding-left: 3.5rem !important;
-    padding-right: 3.5rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
   
   /* Headings & Text */
   .h-display {
-    font-size: clamp(3rem, 5.5vw, 5.25rem) !important; /* ~80px max on large desktop */
+    font-size: clamp(2.7rem, 6vw, 5.4rem) !important;
   }
   .h-section {
-    font-size: clamp(2.25rem, 4vw, 3.5rem) !important;
+    font-size: clamp(2.1rem, 4.5vw, 3.6rem) !important;
   }
   .h-card {
-    font-size: 1.45rem !important;
+    font-size: 1.5rem !important;
   }
   body, p, ul, ol, td, .download-card .dl-desc, .career-card .cc-desc {
-    font-size: 16px !important; /* increased by 15-20% */
+    font-size: 19px !important;
   }
   
   /* Hero Description */
   main#main-content .gradient-hero p[style*="font-size:1.125rem"],
   main#main-content .gradient-hero p.animate-fade-in {
-    font-size: 1.35rem !important; /* ~21px */
+    font-size: 1.35rem !important;
     line-height: 1.8 !important;
   }
   
@@ -226,55 +226,103 @@ main p {
     height: 76px !important;
   }
   .nav {
-    gap: 3rem !important;
+    gap: 2.7rem !important;
   }
   .nav a {
-    font-size: 16.5px !important;
+    font-size: 17px !important;
   }
   main {
     padding-top: 96px !important;
   }
   
-  /* Buttons */
+  /* Buttons & Pills */
   .btn-cta, .btn-outline, .btn-outline-light {
-    padding: 1.15rem 2.75rem !important;
-    font-size: 12.5px !important;
+    padding: 0.9rem 1.8rem !important;
+    font-size: 13px !important;
+  }
+  .pill span, .svc-pill span, .proj-tag, .proj-cat {
+    font-size: 12px !important;
+  }
+  .pill {
+    padding: 0.6rem 1.5rem !important;
   }
   
   /* Statistics cards/tiles */
   .stat-tile {
-    padding: 1.5rem 1.85rem !important;
+    padding: 1.5rem 1.8rem !important;
   }
   .stat-tile .v {
-    font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
+    font-size: clamp(2.1rem, 3.5vw, 2.7rem) !important;
   }
-  .stat-tile .l {
-    font-size: 12px !important;
+  .stat-tile .l, .stat-l {
+    font-size: 13px !important;
   }
   .stat-card {
-    padding: 2rem !important;
+    padding: 2.1rem !important;
   }
   .stat-v {
     font-size: clamp(2.25rem, 3.5vw, 3rem) !important;
   }
-  .stat-l {
-    font-size: 12px !important;
-  }
   
   /* Cards & Layout Breathing Room */
   .grid-cards {
-    gap: 2rem !important;
+    gap: 1.8rem !important;
   }
   .card-pad {
-    padding: 2.5rem !important;
+    padding: 2.4rem !important;
   }
   .icon-tile {
-    width: 64px !important;
-    height: 64px !important;
+    width: 67px !important;
+    height: 67px !important;
     margin-bottom: 1.5rem !important;
   }
   .icon-tile svg {
-    width: 32px !important;
-    height: 32px !important;
+    width: 34px !important;
+    height: 34px !important;
+  }
+  
+  /* Images and Panels */
+  .proj-img, .identity-panel {
+    height: 288px !important;
+  }
+  .sr-img {
+    min-height: 336px !important;
+  }
+  .identity-panel .ip-icon {
+    width: 67px !important;
+    height: 67px !important;
+  }
+  .identity-panel .ip-icon svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .identity-panel .ip-name {
+    font-size: 1.5rem !important;
+  }
+  .identity-panel .ip-loc {
+    font-size: 14px !important;
+  }
+  .identity-panel .ip-stats {
+    font-size: 13px !important;
+  }
+
+  /* Form Elements */
+  .field label, .form-label {
+    font-size: 13px !important;
+  }
+  .field input, .field select, .field textarea, .form-input {
+    font-size: 17px !important;
+    padding: 0.9rem 1.2rem !important;
+  }
+  
+  /* Footer */
+  .site-footer h3, .site-footer h4, .footer-connect h3 {
+    font-size: 12px !important;
+  }
+  .site-footer ul {
+    font-size: 17px !important;
+  }
+  .site-footer .bottom {
+    font-size: 14px !important;
   }
 }
