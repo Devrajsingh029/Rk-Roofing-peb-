@@ -1,5 +1,29 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { resolve, extname, basename } from "path";
+import { readdirSync, existsSync } from "fs";
+
+const input = {};
+
+// Scan root HTML files
+const rootHtmlFiles = readdirSync(__dirname).filter(
+  (file) => extname(file) === ".html"
+);
+for (const file of rootHtmlFiles) {
+  const name = basename(file, ".html");
+  input[name] = resolve(__dirname, file);
+}
+
+// Scan projects/ HTML files if they exist
+const projectsDir = resolve(__dirname, "projects");
+if (existsSync(projectsDir)) {
+  const projectHtmlFiles = readdirSync(projectsDir).filter(
+    (file) => extname(file) === ".html"
+  );
+  for (const file of projectHtmlFiles) {
+    const name = `projects/${basename(file, ".html")}`;
+    input[name] = resolve(projectsDir, file);
+  }
+}
 
 export default defineConfig({
   root: ".",
@@ -14,13 +38,9 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        index: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "about.html"),
-        services: resolve(__dirname, "services.html"),
-        projects: resolve(__dirname, "projects.html"),
-        contact: resolve(__dirname, "contact.html"),
-      },
+      input,
     },
   },
 });
+
+

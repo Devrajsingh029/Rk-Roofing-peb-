@@ -111,3 +111,218 @@ img,svg,video{max-width:100%;height:auto}
 }
 
 .brand-logo-img{height:64px;width:auto;max-width:260px;object-fit:contain;display:block}@media(max-width:1023px){.brand-logo-img{height:56px;max-width:230px}}@media(max-width:640px){.brand-logo-img{height:48px;max-width:200px}}.brand-logo-img--footer{height:72px;max-width:260px;background:rgba(255,255,255,.06);padding:.4rem .6rem;border-radius:.5rem}
+
+/* ===== BREADCRUMB NAV ===== */
+.breadcrumb-nav{background:var(--muted);border-bottom:1px solid var(--border);padding:.75rem 0}
+.breadcrumb-list{display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .5rem;list-style:none;padding:0;margin:0;font-size:13px}
+.breadcrumb-list li{display:flex;align-items:center;gap:.5rem;color:var(--muted-foreground)}
+.breadcrumb-list li:not(:last-child)::after{content:'/';color:var(--border);font-size:12px}
+.breadcrumb-list a{color:var(--muted-foreground);transition:color .2s}.breadcrumb-list a:hover{color:var(--cta-text)}
+.breadcrumb-list li[aria-current="page"]{color:var(--foreground);font-weight:600}
+
+/* ===== SPEC TABLE ===== */
+.spec-table{width:100%;border-collapse:collapse;font-size:14px}
+.spec-table th,.spec-table td{padding:.875rem 1rem;text-align:left;border-bottom:1px solid var(--border)}
+.spec-table th{background:var(--muted);font-family:'Montserrat';font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--foreground);width:38%}
+.spec-table td{color:#0f172ab3;line-height:1.6}
+.spec-table tr:last-child th,.spec-table tr:last-child td{border-bottom:0}
+@media(max-width:600px){.spec-table th,.spec-table td{padding:.6rem .75rem;font-size:13px}}
+
+/* ===== SPEC LIST ===== */
+.spec-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.6rem}
+.spec-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:14px;color:#0f172ab3;line-height:1.6}
+.spec-list li::before{content:'✓';color:var(--cta);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ===== QUOTE POPUP ===== */
+.rk-popup-overlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(6px);z-index:200;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.rk-popup-overlay.open{opacity:1;visibility:visible}
+.rk-popup-box{background:#fff;border-radius:1rem;max-width:480px;width:100%;box-shadow:0 40px 80px -30px rgba(15,23,42,.4);position:relative;overflow:hidden;transform:translateY(20px);transition:transform .35s}
+.rk-popup-overlay.open .rk-popup-box{transform:none}
+.rk-popup-header{background:linear-gradient(135deg,#16205a,#1e2a78);padding:1.75rem 2rem 1.5rem;color:#fff;position:relative}
+.rk-popup-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;border:0;transition:background .2s;font-size:18px;line-height:1}
+.rk-popup-close:hover{background:rgba(255,255,255,.25)}
+.rk-popup-body{padding:1.75rem 2rem}
+.rk-popup-body .form-input{font-size:15px}
+@media(max-width:480px){.rk-popup-header{padding:1.25rem 1.25rem 1rem}.rk-popup-body{padding:1.25rem}}
+
+/* ===== STICKY CALL BAR (mobile) ===== */
+.rk-sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;border-top:1px solid var(--border);box-shadow:0 -4px 20px rgba(15,23,42,.12);padding:.75rem 1rem;gap:.75rem}
+@media(max-width:767px){.rk-sticky-cta{display:flex}}
+.rk-sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem;border-radius:.375rem;font-family:'Montserrat';font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.rk-sticky-call{background:var(--primary);color:#fff}
+.rk-sticky-wa{background:#25D366;color:#fff}
+@media(max-width:767px){body{padding-bottom:72px}}
+
+/* ===== LOCATION PAGE HERO ===== */
+.loc-hero-overlay{background:linear-gradient(180deg,rgba(22,32,90,.88) 0%,rgba(30,42,120,.82) 100%);position:absolute;inset:0}
+
+/* ===== SERVICE DETAIL HERO PILL ===== */
+.svc-pill{display:inline-flex;align-items:center;gap:.6rem;padding:.45rem 1rem;border-radius:9999px;background:rgba(229,168,42,.18);border:1px solid rgba(229,168,42,.35);margin-bottom:1.5rem}
+.svc-pill span{font-family:'Montserrat';font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.35em;color:var(--gold)}
+
+/* ===== DOWNLOAD CARD ===== */
+.download-card{background:#fff;border:1px solid var(--border);border-radius:.75rem;padding:1.5rem;display:flex;align-items:center;gap:1.25rem;transition:all .3s;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.download-card:hover{border-color:rgba(234,120,51,.4);transform:translateY(-2px);box-shadow:0 12px 30px -15px rgba(15,23,42,.18)}
+.download-card .dl-icon{flex-shrink:0;width:52px;height:52px;border-radius:.625rem;background:linear-gradient(135deg,rgba(234,120,51,.15),rgba(229,168,42,.15));display:flex;align-items:center;justify-content:center;color:var(--cta)}
+.download-card .dl-title{font-family:'Montserrat';font-weight:700;font-size:1rem;color:var(--foreground)}
+.download-card .dl-desc{font-size:13px;color:var(--muted-foreground);margin-top:.25rem;line-height:1.5}
+.download-card .dl-btn{margin-top:.75rem;font-family:'Montserrat';font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--cta-text);display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s}
+.download-card:hover .dl-btn{gap:.65rem}
+
+/* ===== CAREER CARD ===== */
+.career-card{background:#fff;border:1px solid var(--border);border-radius:.75rem;padding:1.75rem;transition:all .3s;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.career-card:hover{border-color:rgba(234,120,51,.4);transform:translateY(-3px);box-shadow:0 20px 45px -20px rgba(15,23,42,.2)}
+.career-card .cc-tag{display:inline-flex;gap:.5rem;align-items:center;margin-bottom:1rem}
+.career-card .cc-badge{padding:.25rem .625rem;border-radius:9999px;font-family:'Montserrat';font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.18em}
+.cc-badge-dept{background:rgba(30,42,120,.1);color:var(--primary)}
+.cc-badge-type{background:rgba(234,120,51,.12);color:var(--cta-text)}
+.career-card h3{font-family:'Montserrat';font-weight:700;font-size:1.125rem;color:var(--foreground)}
+.career-card .cc-loc{display:flex;align-items:center;gap:.4rem;font-size:13px;color:var(--muted-foreground);margin-top:.5rem}
+.career-card .cc-desc{font-size:14px;color:#0f172ab3;margin-top:.875rem;line-height:1.7}
+.career-card .cc-apply{margin-top:1.25rem}
+
+/* ===== GLOBAL NARRATIVE PARAGRAPH ALIGNMENT ===== */
+main p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* ===== DESKTOP PROPORTIONAL SCALING (screens wider than 1440px) ===== */
+@media (min-width: 1440px) {
+  .container-x {
+    max-width: 1680px !important;
+    width: min(94vw, 1680px) !important;
+    margin: 0 auto !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  
+  /* Headings & Text */
+  .h-display {
+    font-size: clamp(2.7rem, 6vw, 5.4rem) !important;
+  }
+  .h-section {
+    font-size: clamp(2.1rem, 4.5vw, 3.6rem) !important;
+  }
+  .h-card {
+    font-size: 1.5rem !important;
+  }
+  body, p, ul, ol, td, .download-card .dl-desc, .career-card .cc-desc {
+    font-size: 19px !important;
+  }
+  
+  /* Hero Description */
+  main#main-content .gradient-hero p[style*="font-size:1.125rem"],
+  main#main-content .gradient-hero p.animate-fade-in {
+    font-size: 1.35rem !important;
+    line-height: 1.8 !important;
+  }
+  
+  /* Header & Navigation */
+  .site-header .row {
+    height: 96px !important;
+  }
+  .brand-logo-img {
+    height: 76px !important;
+  }
+  .nav {
+    gap: 2.7rem !important;
+  }
+  .nav a {
+    font-size: 17px !important;
+  }
+  main {
+    padding-top: 96px !important;
+  }
+  
+  /* Buttons & Pills */
+  .btn-cta, .btn-outline, .btn-outline-light {
+    padding: 0.9rem 1.8rem !important;
+    font-size: 13px !important;
+  }
+  .pill span, .svc-pill span, .proj-tag, .proj-cat {
+    font-size: 12px !important;
+  }
+  .pill {
+    padding: 0.6rem 1.5rem !important;
+  }
+  
+  /* Statistics cards/tiles */
+  .stat-tile {
+    padding: 1.5rem 1.8rem !important;
+  }
+  .stat-tile .v {
+    font-size: clamp(2.1rem, 3.5vw, 2.7rem) !important;
+  }
+  .stat-tile .l, .stat-l {
+    font-size: 13px !important;
+  }
+  .stat-card {
+    padding: 2.1rem !important;
+  }
+  .stat-v {
+    font-size: clamp(2.25rem, 3.5vw, 3rem) !important;
+  }
+  
+  /* Cards & Layout Breathing Room */
+  .grid-cards {
+    gap: 1.8rem !important;
+  }
+  .card-pad {
+    padding: 2.4rem !important;
+  }
+  .icon-tile {
+    width: 67px !important;
+    height: 67px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .icon-tile svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  
+  /* Images and Panels */
+  .proj-img, .identity-panel {
+    height: 288px !important;
+  }
+  .sr-img {
+    min-height: 336px !important;
+  }
+  .identity-panel .ip-icon {
+    width: 67px !important;
+    height: 67px !important;
+  }
+  .identity-panel .ip-icon svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .identity-panel .ip-name {
+    font-size: 1.5rem !important;
+  }
+  .identity-panel .ip-loc {
+    font-size: 14px !important;
+  }
+  .identity-panel .ip-stats {
+    font-size: 13px !important;
+  }
+
+  /* Form Elements */
+  .field label, .form-label {
+    font-size: 13px !important;
+  }
+  .field input, .field select, .field textarea, .form-input {
+    font-size: 17px !important;
+    padding: 0.9rem 1.2rem !important;
+  }
+  
+  /* Footer */
+  .site-footer h3, .site-footer h4, .footer-connect h3 {
+    font-size: 12px !important;
+  }
+  .site-footer ul {
+    font-size: 17px !important;
+  }
+  .site-footer .bottom {
+    font-size: 14px !important;
+  }
+}
