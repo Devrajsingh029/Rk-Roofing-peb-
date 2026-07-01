@@ -1,910 +1,737 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RK Roofing PEB - Corporate Catalogue</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-      :root {
-        --background: #ffffff;
-        --foreground: #0f172a;
-        --primary: #1e2a78;
-        --muted: #f4f6fb;
-        --muted-foreground: #525a75;
-        --border: #e2e6ef;
-        --cta: #ea7833;
-        --gold: #e5a82a;
-        --dark-section: #16205a;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RK Roofing PEB - Corporate Catalogue</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --primary: #1e2a78;
+    --muted: #f4f6fb;
+    --muted-foreground: #525a75;
+    --border: #e2e6ef;
+    --cta: #ea7833;
+    --gold: #e5a82a;
+    --dark-section: #16205a;
+  }
 
-      * {
-        box-sizing: border-box;
-      }
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--foreground);
+    background: #e5e7eb; /* Gray bg for screen viewing */
+    -webkit-font-smoothing: antialiased;
+  }
 
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-        color: var(--foreground);
-        background: #e5e7eb; /* Gray bg for screen viewing */
-        -webkit-font-smoothing: antialiased;
-      }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Montserrat", sans-serif;
-        margin: 0;
-        line-height: 1.2;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-      }
+  p { margin: 0; line-height: 1.6; }
 
-      p {
-        margin: 0;
-        line-height: 1.6;
-      }
+  /* Print Layout Base */
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    page-break-after: always;
+  }
 
-      /* Print Layout Base */
-      .page {
-        width: 210mm;
-        height: 297mm;
-        background: white;
-        margin: 20px auto;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        page-break-after: always;
-      }
+  .content {
+    padding: 20mm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-      .content {
-        padding: 20mm;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
 
-      @page {
-        size: A4 portrait;
-        margin: 0;
-      }
+  @media print {
+    body { background: white; }
+    .page { 
+      margin: 0; 
+      box-shadow: none; 
+      page-break-after: always; 
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
 
-      @media print {
-        body {
-          background: white;
-        }
-        .page {
-          margin: 0;
-          box-shadow: none;
-          page-break-after: always;
-          -webkit-print-color-adjust: exact !important;
-          print-color-adjust: exact !important;
-        }
-        * {
-          -webkit-print-color-adjust: exact !important;
-          print-color-adjust: exact !important;
-        }
-      }
+  /* Utility */
+  .text-gradient {
+    background: linear-gradient(90deg, var(--cta), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--cta);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  /* --- PAGE 1: Cover --- */
+  .cover-page {
+    background: linear-gradient(135deg, var(--dark-section) 0%, var(--primary) 50%, var(--dark-section) 100%);
+    color: white;
+    padding: 0;
+  }
+  .cover-img {
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+    border-bottom: 4px solid var(--cta);
+  }
+  .cover-content {
+    padding: 15mm 20mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45%;
+  }
+  .cover-logo {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--cta), var(--gold));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .cover-title {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.1;
+  }
+  .cover-subtitle {
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    font-family: Montserrat;
+  }
 
-      /* Utility */
-      .text-gradient {
-        background: linear-gradient(90deg, var(--cta), var(--gold));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .eyebrow {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 0.3em;
-        color: var(--cta);
-        margin-bottom: 0.5rem;
-        display: block;
-      }
+  /* --- PAGE 2: Company Profile --- */
+  .page-title {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 8mm;
+    padding-bottom: 4mm;
+    border-bottom: 2px solid var(--border);
+  }
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10mm;
+  }
+  .profile-text p {
+    font-size: 12px;
+    color: var(--muted-foreground);
+    margin-bottom: 4mm;
+    line-height: 1.8;
+  }
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--muted);
+  }
+  .stats-row {
+    display: flex;
+    gap: 15mm;
+    margin-top: 15mm;
+    padding-top: 15mm;
+    border-top: 1px solid var(--border);
+  }
+  .stat-box .num {
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+  }
+  .stat-box .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--cta);
+    margin-top: 5px;
+    font-weight: 700;
+  }
 
-      /* --- PAGE 1: Cover --- */
-      .cover-page {
-        background: linear-gradient(
-          135deg,
-          var(--dark-section) 0%,
-          var(--primary) 50%,
-          var(--dark-section) 100%
-        );
-        color: white;
-        padding: 0;
-      }
-      .cover-img {
-        width: 100%;
-        height: 55%;
-        object-fit: cover;
-        border-bottom: 4px solid var(--cta);
-      }
-      .cover-content {
-        padding: 15mm 20mm;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 45%;
-      }
-      .cover-logo {
-        width: 70px;
-        height: 70px;
-        background: linear-gradient(135deg, var(--cta), var(--gold));
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Montserrat;
-        font-weight: 900;
-        font-size: 24px;
-        color: white;
-        margin-bottom: 20px;
-      }
-      .cover-title {
-        font-size: 42px;
-        font-weight: 900;
-        margin-bottom: 15px;
-        line-height: 1.1;
-      }
-      .cover-subtitle {
-        font-size: 14px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.7);
-        font-family: Montserrat;
-      }
+  /* --- PAGES 3 & 4: Services --- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+  }
+  .service-card {
+    background: var(--muted);
+    padding: 6mm;
+    border-radius: 8px;
+    border-left: 3px solid var(--cta);
+  }
+  .service-card .icon {
+    width: 32px;
+    height: 32px;
+    color: var(--primary);
+    margin-bottom: 4mm;
+  }
+  .service-card h4 {
+    font-size: 14px;
+    color: var(--primary);
+    margin-bottom: 2mm;
+  }
+  .service-card p {
+    font-size: 10px;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+  }
 
-      /* --- PAGE 2: Company Profile --- */
-      .page-title {
-        font-size: 32px;
-        color: var(--primary);
-        margin-bottom: 8mm;
-        padding-bottom: 4mm;
-        border-bottom: 2px solid var(--border);
-      }
-      .profile-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10mm;
-      }
-      .profile-text p {
-        font-size: 12px;
-        color: var(--muted-foreground);
-        margin-bottom: 4mm;
-        line-height: 1.8;
-      }
-      .profile-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-        background: var(--muted);
-      }
-      .stats-row {
-        display: flex;
-        gap: 15mm;
-        margin-top: 15mm;
-        padding-top: 15mm;
-        border-top: 1px solid var(--border);
-      }
-      .stat-box .num {
-        font-size: 36px;
-        font-family: Montserrat;
-        font-weight: 900;
-        color: var(--primary);
-        line-height: 1;
-      }
-      .stat-box .label {
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--cta);
-        margin-top: 5px;
-        font-weight: 700;
-      }
+  /* --- PAGE 5: Industries --- */
+  .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6mm;
+    margin-top: 10mm;
+  }
+  .industry-card {
+    text-align: center;
+    padding: 8mm 4mm;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .industry-card i {
+    color: var(--cta);
+    margin-bottom: 4mm;
+  }
+  .industry-card h4 {
+    font-size: 12px;
+    color: var(--primary);
+  }
 
-      /* --- PAGES 3 & 4: Services --- */
-      .services-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8mm;
-      }
-      .service-card {
-        background: var(--muted);
-        padding: 6mm;
-        border-radius: 8px;
-        border-left: 3px solid var(--cta);
-      }
-      .service-card .icon {
-        width: 32px;
-        height: 32px;
-        color: var(--primary);
-        margin-bottom: 4mm;
-      }
-      .service-card h4 {
-        font-size: 14px;
-        color: var(--primary);
-        margin-bottom: 2mm;
-      }
-      .service-card p {
-        font-size: 10px;
-        color: var(--muted-foreground);
-        line-height: 1.6;
-      }
+  /* --- PAGE 6: Why Choose Us & Process --- */
+  .why-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6mm;
+    margin-bottom: 15mm;
+  }
+  .why-box {
+    background: var(--primary);
+    color: white;
+    padding: 6mm;
+    border-radius: 8px;
+  }
+  .why-box h4 {
+    font-size: 13px;
+    margin-bottom: 2mm;
+  }
+  .why-box p {
+    font-size: 10px;
+    color: rgba(255,255,255,0.8);
+  }
+  .process-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm;
+    margin-top: 8mm;
+  }
+  .process-item {
+    display: flex;
+    gap: 4mm;
+    align-items: flex-start;
+  }
+  .process-num {
+    width: 24px;
+    height: 24px;
+    background: var(--cta);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .process-text h4 {
+    font-size: 12px;
+    color: var(--primary);
+    margin-bottom: 2px;
+  }
+  .process-text p {
+    font-size: 10px;
+    color: var(--muted-foreground);
+  }
 
-      /* --- PAGE 5: Industries --- */
-      .industries-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6mm;
-        margin-top: 10mm;
-      }
-      .industry-card {
-        text-align: center;
-        padding: 8mm 4mm;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-      }
-      .industry-card i {
-        color: var(--cta);
-        margin-bottom: 4mm;
-      }
-      .industry-card h4 {
-        font-size: 12px;
-        color: var(--primary);
-      }
+  /* --- PAGE 7: Projects --- */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+  }
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .project-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  .project-info {
+    padding: 4mm;
+  }
+  .project-info h4 {
+    font-size: 12px;
+    color: var(--primary);
+  }
+  .project-info p {
+    font-size: 9px;
+    color: var(--muted-foreground);
+    margin-top: 1mm;
+  }
 
-      /* --- PAGE 6: Why Choose Us & Process --- */
-      .why-row {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6mm;
-        margin-bottom: 15mm;
-      }
-      .why-box {
-        background: var(--primary);
-        color: white;
-        padding: 6mm;
-        border-radius: 8px;
-      }
-      .why-box h4 {
-        font-size: 13px;
-        margin-bottom: 2mm;
-      }
-      .why-box p {
-        font-size: 10px;
-        color: rgba(255, 255, 255, 0.8);
-      }
-      .process-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6mm;
-        margin-top: 8mm;
-      }
-      .process-item {
-        display: flex;
-        gap: 4mm;
-        align-items: flex-start;
-      }
-      .process-num {
-        width: 24px;
-        height: 24px;
-        background: var(--cta);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-        font-weight: 800;
-        flex-shrink: 0;
-      }
-      .process-text h4 {
-        font-size: 12px;
-        color: var(--primary);
-        margin-bottom: 2px;
-      }
-      .process-text p {
-        font-size: 10px;
-        color: var(--muted-foreground);
-      }
+  /* --- PAGE 8: Back Cover / Contact --- */
+  .back-cover {
+    background: var(--dark-section);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contact-info {
+    margin-top: 20mm;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    margin-bottom: 6mm;
+  }
+  .contact-item i {
+    color: var(--cta);
+  }
+  .contact-item p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 10mm;
+  }
 
-      /* --- PAGE 7: Projects --- */
-      .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8mm;
-      }
-      .project-card {
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .project-card img {
-        width: 100%;
-        height: 120px;
-        object-fit: cover;
-      }
-      .project-info {
-        padding: 4mm;
-      }
-      .project-info h4 {
-        font-size: 12px;
-        color: var(--primary);
-      }
-      .project-info p {
-        font-size: 9px;
-        color: var(--muted-foreground);
-        margin-top: 1mm;
-      }
+  /* Header/Footer Print utilities */
+  .page-footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 20mm;
+    right: 20mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: var(--border);
+    font-family: Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
 
-      /* --- PAGE 8: Back Cover / Contact --- */
-      .back-cover {
-        background: var(--dark-section);
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .contact-info {
-        margin-top: 20mm;
-      }
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 4mm;
-        margin-bottom: 6mm;
-      }
-      .contact-item i {
-        color: var(--cta);
-      }
-      .contact-item p {
-        font-size: 14px;
-        font-weight: 500;
-      }
-      .footer-logo {
-        text-align: center;
-        margin-bottom: 10mm;
-      }
+<!-- PAGE 1: COVER -->
+<div class="page cover-page">
+  <img src="assets/bg-hero.jpg" class="cover-img" alt="Industrial Construction">
+  <div class="cover-content">
+    <div class="cover-logo">RK</div>
+    <div class="eyebrow" style="color:var(--gold); margin-bottom:15px;">Corporate Catalogue</div>
+    <h1 class="cover-title">ENGINEERED<br>INDUSTRIAL<br><span class="text-gradient">CONSTRUCTION</span></h1>
+    <div class="cover-subtitle" style="margin-top:20px;">Pre-Engineered Buildings &bull; Roofing &bull; Steel Erection</div>
+  </div>
+</div>
 
-      /* Header/Footer Print utilities */
-      .page-footer {
-        position: absolute;
-        bottom: 10mm;
-        left: 20mm;
-        right: 20mm;
-        display: flex;
-        justify-content: space-between;
-        font-size: 9px;
-        color: var(--border);
-        font-family: Montserrat;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- PAGE 1: COVER -->
-    <div class="page cover-page">
-      <img src="assets/bg-hero.jpg" class="cover-img" alt="Industrial Construction" />
-      <div class="cover-content">
-        <div class="cover-logo">RK</div>
-        <div class="eyebrow" style="color: var(--gold); margin-bottom: 15px">
-          Corporate Catalogue
-        </div>
-        <h1 class="cover-title">
-          ENGINEERED<br />INDUSTRIAL<br /><span class="text-gradient">CONSTRUCTION</span>
-        </h1>
-        <div class="cover-subtitle" style="margin-top: 20px">
-          Pre-Engineered Buildings &bull; Roofing &bull; Steel Erection
-        </div>
+<!-- PAGE 2: COMPANY PROFILE -->
+<div class="page">
+  <div class="content">
+    <span class="eyebrow">Who We Are</span>
+    <h2 class="page-title">Company Profile</h2>
+    
+    <div class="profile-grid">
+      <div class="profile-text">
+        <p><strong>RK Roofing PEB Pvt Ltd</strong> is a trusted Pan-India service provider specializing in Pre-Engineered Building (PEB) erection, structural steel erection, industrial roofing, wall cladding, and comprehensive industrial installation services.</p>
+        <p>Established in 2003 by Late Shri Raj Kishore Singh, our foundation was built on reliability, safety, and unwavering dedication to quality workmanship.</p>
+        <p>Over the past two decades, we have successfully executed critical infrastructure projects across diverse sectors, including automotive, logistics, manufacturing, airports, and commercial warehousing.</p>
+        <p>Our focus is strictly on execution, fabrication, and installation — bringing engineered precision to every construction site we manage.</p>
+      </div>
+      <div>
+        <img src="assets/about-office.webp" class="profile-img" alt="Company Operations">
       </div>
     </div>
 
-    <!-- PAGE 2: COMPANY PROFILE -->
-    <div class="page">
-      <div class="content">
-        <span class="eyebrow">Who We Are</span>
-        <h2 class="page-title">Company Profile</h2>
-
-        <div class="profile-grid">
-          <div class="profile-text">
-            <p>
-              <strong>RK Roofing PEB Pvt Ltd</strong> is a trusted Pan-India service provider
-              specializing in Pre-Engineered Building (PEB) erection, structural steel erection,
-              industrial roofing, wall cladding, and comprehensive industrial installation services.
-            </p>
-            <p>
-              Established in 2003 by Late Shri Raj Kishore Singh, our foundation was built on
-              reliability, safety, and unwavering dedication to quality workmanship.
-            </p>
-            <p>
-              Over the past two decades, we have successfully executed critical infrastructure
-              projects across diverse sectors, including automotive, logistics, manufacturing,
-              airports, and commercial warehousing.
-            </p>
-            <p>
-              Our focus is strictly on execution, fabrication, and installation — bringing
-              engineered precision to every construction site we manage.
-            </p>
-          </div>
-          <div>
-            <img src="assets/about-office.webp" class="profile-img" alt="Company Operations" />
-          </div>
-        </div>
-
-        <div class="stats-row">
-          <div class="stat-box">
-            <div class="num">25+</div>
-            <div class="label">Years of Excellence</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">150+</div>
-            <div class="label">Major Projects Executed</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">Pan-India</div>
-            <div class="label">Operational Reach</div>
-          </div>
-        </div>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="num">25+</div>
+        <div class="label">Years of Excellence</div>
       </div>
-      <div class="page-footer">
-        <span>RK Roofing PEB Pvt Ltd</span>
-        <span>02</span>
+      <div class="stat-box">
+        <div class="num">150+</div>
+        <div class="label">Major Projects Executed</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">Pan-India</div>
+        <div class="label">Operational Reach</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>RK Roofing PEB Pvt Ltd</span>
+    <span>02</span>
+  </div>
+</div>
+
+<!-- PAGE 3: SERVICES 1 -->
+<div class="page">
+  <div class="content">
+    <span class="eyebrow">What We Do</span>
+    <h2 class="page-title">Our Services</h2>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <i data-lucide="factory" class="icon"></i>
+        <h4>PEB Erection</h4>
+        <p>Expert erection of Pre-Engineered Buildings for industrial and commercial use. Precise assembly of primary and secondary framing systems ensuring structural integrity and longevity.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="layout-template" class="icon"></i>
+        <h4>Structural Steel Erection</h4>
+        <p>Safe and efficient erection of heavy structural steel for complex industrial frameworks, power plants, and large-span warehouses.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="home" class="icon"></i>
+        <h4>Industrial Roofing</h4>
+        <p>Installation of high-grade industrial roofing solutions. We execute durable, weather-proof roofing systems tailored to exact facility requirements.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="waves" class="icon"></i>
+        <h4>Standing Seam Roofing</h4>
+        <p>Installation of advanced standing seam and Kalzip roofing systems for leak-proof, continuous surface protection on large commercial facilities.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="square" class="icon"></i>
+        <h4>Wall Cladding</h4>
+        <p>Premium exterior wall cladding execution for aesthetic appeal and superior environmental protection of industrial structures.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="layers" class="icon"></i>
+        <h4>Insulated Panel Services</h4>
+        <p>Precision installation of PUF/EPS insulated panels to ensure optimal thermal efficiency for temperature-sensitive facilities.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>RK Roofing PEB Pvt Ltd</span>
+    <span>03</span>
+  </div>
+</div>
+
+<!-- PAGE 4: SERVICES 2 & INDUSTRIES -->
+<div class="page">
+  <div class="content">
+    <span class="eyebrow">Continued</span>
+    <h2 class="page-title">Specialized Installations</h2>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <i data-lucide="snowflake" class="icon"></i>
+        <h4>Cold Room Panels</h4>
+        <p>Execution of airtight cold storage panelling systems for pharmaceutical, food processing, and specialized logistics centers.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="split-square-vertical" class="icon"></i>
+        <h4>Mezzanine Floors</h4>
+        <p>Installation of robust mezzanine flooring structures to maximize vertical space utilization within existing warehouse boundaries.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="cloud-rain" class="icon"></i>
+        <h4>Flashing & Gutters</h4>
+        <p>Complete execution of flashing, gutters, and downpipe systems for superior water management and drainage on large roofs.</p>
+      </div>
+      <div class="service-card">
+        <i data-lucide="sun" class="icon"></i>
+        <h4>Insulation & Skylights</h4>
+        <p>Integration of advanced under-deck insulation and polycarbonate skylights to improve energy efficiency and natural lighting.</p>
       </div>
     </div>
 
-    <!-- PAGE 3: SERVICES 1 -->
-    <div class="page">
-      <div class="content">
-        <span class="eyebrow">What We Do</span>
-        <h2 class="page-title">Our Services</h2>
+    <span class="eyebrow" style="margin-top:12mm">Sectors</span>
+    <h2 class="page-title" style="border:none; margin-bottom:0">Industries We Serve</h2>
+    <div class="industries-grid">
+      <div class="industry-card"><i data-lucide="package" size="32"></i><h4>Industrial Warehouses</h4></div>
+      <div class="industry-card"><i data-lucide="truck" size="32"></i><h4>Logistics Parks</h4></div>
+      <div class="industry-card"><i data-lucide="cpu" size="32"></i><h4>Manufacturing Facilities</h4></div>
+      <div class="industry-card"><i data-lucide="car" size="32"></i><h4>Automobile Industry</h4></div>
+      <div class="industry-card"><i data-lucide="hammer" size="32"></i><h4>Steel Industry</h4></div>
+      <div class="industry-card"><i data-lucide="plane" size="32"></i><h4>Airport Hangars</h4></div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>RK Roofing PEB Pvt Ltd</span>
+    <span>04</span>
+  </div>
+</div>
 
-        <div class="services-grid">
-          <div class="service-card">
-            <i data-lucide="factory" class="icon"></i>
-            <h4>PEB Erection</h4>
-            <p>
-              Expert erection of Pre-Engineered Buildings for industrial and commercial use. Precise
-              assembly of primary and secondary framing systems ensuring structural integrity and
-              longevity.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="layout-template" class="icon"></i>
-            <h4>Structural Steel Erection</h4>
-            <p>
-              Safe and efficient erection of heavy structural steel for complex industrial
-              frameworks, power plants, and large-span warehouses.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="home" class="icon"></i>
-            <h4>Industrial Roofing</h4>
-            <p>
-              Installation of high-grade industrial roofing solutions. We execute durable,
-              weather-proof roofing systems tailored to exact facility requirements.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="waves" class="icon"></i>
-            <h4>Standing Seam Roofing</h4>
-            <p>
-              Installation of advanced standing seam and Kalzip roofing systems for leak-proof,
-              continuous surface protection on large commercial facilities.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="square" class="icon"></i>
-            <h4>Wall Cladding</h4>
-            <p>
-              Premium exterior wall cladding execution for aesthetic appeal and superior
-              environmental protection of industrial structures.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="layers" class="icon"></i>
-            <h4>Insulated Panel Services</h4>
-            <p>
-              Precision installation of PUF/EPS insulated panels to ensure optimal thermal
-              efficiency for temperature-sensitive facilities.
-            </p>
-          </div>
-        </div>
+<!-- PAGE 5: PROCESS & WHY US -->
+<div class="page">
+  <div class="content">
+    <span class="eyebrow">Our Strengths</span>
+    <h2 class="page-title">Why Choose RK Roofing</h2>
+    
+    <div class="why-row">
+      <div class="why-box">
+        <h4>Safety First</h4>
+        <p>Strict adherence to international safety standards, ensuring zero-harm execution environments on every site.</p>
       </div>
-      <div class="page-footer">
-        <span>RK Roofing PEB Pvt Ltd</span>
-        <span>03</span>
+      <div class="why-box">
+        <h4>Engineering Rigor</h4>
+        <p>Meticulous attention to structural details during execution, ensuring precise assembly and long-lasting stability.</p>
+      </div>
+      <div class="why-box">
+        <h4>Disciplined Execution</h4>
+        <p>A proven track record of completing complex industrial projects on schedule and within budget constraints.</p>
       </div>
     </div>
 
-    <!-- PAGE 4: SERVICES 2 & INDUSTRIES -->
-    <div class="page">
-      <div class="content">
-        <span class="eyebrow">Continued</span>
-        <h2 class="page-title">Specialized Installations</h2>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <i data-lucide="snowflake" class="icon"></i>
-            <h4>Cold Room Panels</h4>
-            <p>
-              Execution of airtight cold storage panelling systems for pharmaceutical, food
-              processing, and specialized logistics centers.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="split-square-vertical" class="icon"></i>
-            <h4>Mezzanine Floors</h4>
-            <p>
-              Installation of robust mezzanine flooring structures to maximize vertical space
-              utilization within existing warehouse boundaries.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="cloud-rain" class="icon"></i>
-            <h4>Flashing & Gutters</h4>
-            <p>
-              Complete execution of flashing, gutters, and downpipe systems for superior water
-              management and drainage on large roofs.
-            </p>
-          </div>
-          <div class="service-card">
-            <i data-lucide="sun" class="icon"></i>
-            <h4>Insulation & Skylights</h4>
-            <p>
-              Integration of advanced under-deck insulation and polycarbonate skylights to improve
-              energy efficiency and natural lighting.
-            </p>
-          </div>
-        </div>
-
-        <span class="eyebrow" style="margin-top: 12mm">Sectors</span>
-        <h2 class="page-title" style="border: none; margin-bottom: 0">Industries We Serve</h2>
-        <div class="industries-grid">
-          <div class="industry-card">
-            <i data-lucide="package" size="32"></i>
-            <h4>Industrial Warehouses</h4>
-          </div>
-          <div class="industry-card">
-            <i data-lucide="truck" size="32"></i>
-            <h4>Logistics Parks</h4>
-          </div>
-          <div class="industry-card">
-            <i data-lucide="cpu" size="32"></i>
-            <h4>Manufacturing Facilities</h4>
-          </div>
-          <div class="industry-card">
-            <i data-lucide="car" size="32"></i>
-            <h4>Automobile Industry</h4>
-          </div>
-          <div class="industry-card">
-            <i data-lucide="hammer" size="32"></i>
-            <h4>Steel Industry</h4>
-          </div>
-          <div class="industry-card">
-            <i data-lucide="plane" size="32"></i>
-            <h4>Airport Hangars</h4>
-          </div>
+    <span class="eyebrow">Workflow</span>
+    <h2 class="page-title">Our Work Process</h2>
+    
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num">1</div>
+        <div class="process-text">
+          <h4>Client Consultation</h4>
+          <p>Understanding project scope and requirements.</p>
         </div>
       </div>
-      <div class="page-footer">
-        <span>RK Roofing PEB Pvt Ltd</span>
-        <span>04</span>
-      </div>
-    </div>
-
-    <!-- PAGE 5: PROCESS & WHY US -->
-    <div class="page">
-      <div class="content">
-        <span class="eyebrow">Our Strengths</span>
-        <h2 class="page-title">Why Choose RK Roofing</h2>
-
-        <div class="why-row">
-          <div class="why-box">
-            <h4>Safety First</h4>
-            <p>
-              Strict adherence to international safety standards, ensuring zero-harm execution
-              environments on every site.
-            </p>
-          </div>
-          <div class="why-box">
-            <h4>Engineering Rigor</h4>
-            <p>
-              Meticulous attention to structural details during execution, ensuring precise assembly
-              and long-lasting stability.
-            </p>
-          </div>
-          <div class="why-box">
-            <h4>Disciplined Execution</h4>
-            <p>
-              A proven track record of completing complex industrial projects on schedule and within
-              budget constraints.
-            </p>
-          </div>
-        </div>
-
-        <span class="eyebrow">Workflow</span>
-        <h2 class="page-title">Our Work Process</h2>
-
-        <div class="process-list">
-          <div class="process-item">
-            <div class="process-num">1</div>
-            <div class="process-text">
-              <h4>Client Consultation</h4>
-              <p>Understanding project scope and requirements.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">2</div>
-            <div class="process-text">
-              <h4>Site Visit</h4>
-              <p>Thorough assessment of the execution site.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">3</div>
-            <div class="process-text">
-              <h4>Project Discussion</h4>
-              <p>Aligning on execution timelines and methodology.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">4</div>
-            <div class="process-text">
-              <h4>Quotation</h4>
-              <p>Transparent and detailed budgetary estimates.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">5</div>
-            <div class="process-text">
-              <h4>Material Procurement</h4>
-              <p>Sourcing specified high-grade construction materials.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">6</div>
-            <div class="process-text">
-              <h4>Installation & Execution</h4>
-              <p>Expert erection and construction by skilled teams.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">7</div>
-            <div class="process-text">
-              <h4>Quality Inspection</h4>
-              <p>Rigorous checks to ensure structural integrity.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-num">8</div>
-            <div class="process-text">
-              <h4>Project Handover</h4>
-              <p>Final delivery of the completed infrastructure.</p>
-            </div>
-          </div>
+      <div class="process-item">
+        <div class="process-num">2</div>
+        <div class="process-text">
+          <h4>Site Visit</h4>
+          <p>Thorough assessment of the execution site.</p>
         </div>
       </div>
-      <div class="page-footer">
-        <span>RK Roofing PEB Pvt Ltd</span>
-        <span>05</span>
-      </div>
-    </div>
-
-    <!-- PAGE 6: PROJECTS -->
-    <div class="page">
-      <div class="content">
-        <span class="eyebrow">Our Portfolio</span>
-        <h2 class="page-title">Major Projects</h2>
-
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="assets/project-tata.webp" alt="Tata Motors" />
-            <div class="project-info">
-              <h4>TATA Motors Warehouse</h4>
-              <p>
-                <strong>Location:</strong> Hubli &bull; <strong>Scope:</strong> PEB Erection &
-                Roofing
-              </p>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/project-amazon.webp" alt="Amazon" />
-            <div class="project-info">
-              <h4>Amazon Logistics Hub</h4>
-              <p>
-                <strong>Location:</strong> Bangalore &bull; <strong>Scope:</strong> Standing Seam
-                Installation
-              </p>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/project-kia.webp" alt="Kia Motors" />
-            <div class="project-info">
-              <h4>KIA Motors Manufacturing</h4>
-              <p>
-                <strong>Location:</strong> Anantapur &bull; <strong>Scope:</strong> Wall Cladding &
-                Roofing
-              </p>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/project-bhoruka.webp" alt="Bhoruka" />
-            <div class="project-info">
-              <h4>Bhoruka Extrusions</h4>
-              <p>
-                <strong>Location:</strong> Mysore &bull; <strong>Scope:</strong> Complete PEB
-                Erection
-              </p>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/project-jsw.jpg" alt="JSW" />
-            <div class="project-info">
-              <h4>JSW Steel Facility</h4>
-              <p>
-                <strong>Location:</strong> Bellary &bull; <strong>Scope:</strong> Structural Steel
-                Erection
-              </p>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/bg-hero.jpg" alt="Industrial Facility" />
-            <div class="project-info">
-              <h4>IndoSpace Logistics Park</h4>
-              <p>
-                <strong>Location:</strong> Chennai &bull; <strong>Scope:</strong> Heavy PEB
-                Installation
-              </p>
-            </div>
-          </div>
+      <div class="process-item">
+        <div class="process-num">3</div>
+        <div class="process-text">
+          <h4>Project Discussion</h4>
+          <p>Aligning on execution timelines and methodology.</p>
         </div>
       </div>
-      <div class="page-footer">
-        <span>RK Roofing PEB Pvt Ltd</span>
-        <span>06</span>
-      </div>
-    </div>
-
-    <!-- PAGE 7: PROJECT GALLERY -->
-    <div class="page">
-      <div class="content">
-        <span class="eyebrow">Visual Showcase</span>
-        <h2 class="page-title">Project Gallery</h2>
-
-        <div
-          class="projects-grid"
-          style="grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 10mm"
-        >
-          <div class="project-card" style="border: none; border-radius: 0">
-            <img
-              src="assets/project-jsw.jpg"
-              alt="JSW Steel"
-              style="height: 160px; border-radius: 8px"
-            />
-          </div>
-          <div class="project-card" style="border: none; border-radius: 0">
-            <img
-              src="assets/bg-hero.jpg"
-              alt="Industrial Construction"
-              style="height: 160px; border-radius: 8px"
-            />
-          </div>
-          <div class="project-card" style="border: none; border-radius: 0">
-            <img
-              src="assets/project-tata.webp"
-              alt="Tata Motors"
-              style="height: 160px; border-radius: 8px"
-            />
-          </div>
-          <div class="project-card" style="border: none; border-radius: 0">
-            <img
-              src="assets/project-amazon.webp"
-              alt="Amazon Hub"
-              style="height: 160px; border-radius: 8px"
-            />
-          </div>
-          <div class="project-card" style="border: none; border-radius: 0">
-            <img
-              src="assets/hero.webp"
-              alt="PEB Facility"
-              style="height: 160px; border-radius: 8px"
-            />
-          </div>
-          <div class="project-card" style="border: none; border-radius: 0">
-            <img
-              src="assets/project-kia.webp"
-              alt="Kia Motors"
-              style="height: 160px; border-radius: 8px"
-            />
-          </div>
+      <div class="process-item">
+        <div class="process-num">4</div>
+        <div class="process-text">
+          <h4>Quotation</h4>
+          <p>Transparent and detailed budgetary estimates.</p>
         </div>
       </div>
-      <div class="page-footer">
-        <span>RK Roofing PEB Pvt Ltd</span>
-        <span>07</span>
+      <div class="process-item">
+        <div class="process-num">5</div>
+        <div class="process-text">
+          <h4>Material Procurement</h4>
+          <p>Sourcing specified high-grade construction materials.</p>
+        </div>
       </div>
-    </div>
-
-    <!-- PAGE 8: CONTACT / BACK COVER -->
-    <div class="page back-cover">
-      <div class="content" style="justify-content: center">
-        <div class="footer-logo">
-          <div class="cover-logo" style="margin: 0 auto 20px">RK</div>
-          <h2 style="font-size: 24px">RK ROOFING PEB PVT LTD</h2>
-          <p
-            style="
-              color: var(--cta);
-              font-size: 12px;
-              letter-spacing: 0.2em;
-              text-transform: uppercase;
-              margin-top: 5px;
-              font-weight: 700;
-            "
-          >
-            Engineered Industrial Construction
-          </p>
+      <div class="process-item">
+        <div class="process-num">6</div>
+        <div class="process-text">
+          <h4>Installation & Execution</h4>
+          <p>Expert erection and construction by skilled teams.</p>
         </div>
-
-        <div
-          class="contact-info"
-          style="
-            align-self: center;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15mm;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            width: 80%;
-          "
-        >
-          <div class="contact-item">
-            <i data-lucide="map-pin"></i>
-            <p>
-              217, JK Dewasi Complex, Attur Main Road, Yelahanka New Town, Bengaluru, Karnataka
-              560064
-            </p>
-          </div>
-          <div class="contact-item">
-            <i data-lucide="phone"></i>
-            <p>+91 98457 70392</p>
-          </div>
-          <div class="contact-item">
-            <i data-lucide="mail"></i>
-            <p>rkroofingpeb@gmail.com</p>
-          </div>
-          <div class="contact-item">
-            <i data-lucide="globe"></i>
-            <p>www.rkroofingpeb.com</p>
-          </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">7</div>
+        <div class="process-text">
+          <h4>Quality Inspection</h4>
+          <p>Rigorous checks to ensure structural integrity.</p>
         </div>
-
-        <div
-          style="
-            text-align: center;
-            margin-top: 20mm;
-            font-size: 10px;
-            color: rgba(255, 255, 255, 0.5);
-          "
-        >
-          <p>Pan-India Execution &bull; 25+ Years Experience &bull; Uncompromising Quality</p>
+      </div>
+      <div class="process-item">
+        <div class="process-num">8</div>
+        <div class="process-text">
+          <h4>Project Handover</h4>
+          <p>Final delivery of the completed infrastructure.</p>
         </div>
       </div>
     </div>
+  </div>
+  <div class="page-footer">
+    <span>RK Roofing PEB Pvt Ltd</span>
+    <span>05</span>
+  </div>
+</div>
 
-    <script>
-      lucide.createIcons();
-    </script>
-  </body>
+<!-- PAGE 6: PROJECTS -->
+<div class="page">
+  <div class="content">
+    <span class="eyebrow">Our Portfolio</span>
+    <h2 class="page-title">Major Projects</h2>
+    
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/project-tata.webp" alt="Tata Motors">
+        <div class="project-info">
+          <h4>TATA Motors Warehouse</h4>
+          <p><strong>Location:</strong> Hubli &bull; <strong>Scope:</strong> PEB Erection & Roofing</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/project-amazon.webp" alt="Amazon">
+        <div class="project-info">
+          <h4>Amazon Logistics Hub</h4>
+          <p><strong>Location:</strong> Bangalore &bull; <strong>Scope:</strong> Standing Seam Installation</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/project-kia.webp" alt="Kia Motors">
+        <div class="project-info">
+          <h4>KIA Motors Manufacturing</h4>
+          <p><strong>Location:</strong> Anantapur &bull; <strong>Scope:</strong> Wall Cladding & Roofing</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/project-bhoruka.webp" alt="Bhoruka">
+        <div class="project-info">
+          <h4>Bhoruka Extrusions</h4>
+          <p><strong>Location:</strong> Mysore &bull; <strong>Scope:</strong> Complete PEB Erection</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/project-jsw.jpg" alt="JSW">
+        <div class="project-info">
+          <h4>JSW Steel Facility</h4>
+          <p><strong>Location:</strong> Bellary &bull; <strong>Scope:</strong> Structural Steel Erection</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/bg-hero.jpg" alt="Industrial Facility">
+        <div class="project-info">
+          <h4>IndoSpace Logistics Park</h4>
+          <p><strong>Location:</strong> Chennai &bull; <strong>Scope:</strong> Heavy PEB Installation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>RK Roofing PEB Pvt Ltd</span>
+    <span>06</span>
+  </div>
+</div>
+
+<!-- PAGE 7: PROJECT GALLERY -->
+<div class="page">
+  <div class="content">
+    <span class="eyebrow">Visual Showcase</span>
+    <h2 class="page-title">Project Gallery</h2>
+    
+    <div class="projects-grid" style="grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 10mm;">
+      <div class="project-card" style="border:none; border-radius:0;">
+        <img src="assets/project-jsw.jpg" alt="JSW Steel" style="height: 160px; border-radius: 8px;">
+      </div>
+      <div class="project-card" style="border:none; border-radius:0;">
+        <img src="assets/bg-hero.jpg" alt="Industrial Construction" style="height: 160px; border-radius: 8px;">
+      </div>
+      <div class="project-card" style="border:none; border-radius:0;">
+        <img src="assets/project-tata.webp" alt="Tata Motors" style="height: 160px; border-radius: 8px;">
+      </div>
+      <div class="project-card" style="border:none; border-radius:0;">
+        <img src="assets/project-amazon.webp" alt="Amazon Hub" style="height: 160px; border-radius: 8px;">
+      </div>
+      <div class="project-card" style="border:none; border-radius:0;">
+        <img src="assets/hero.webp" alt="PEB Facility" style="height: 160px; border-radius: 8px;">
+      </div>
+      <div class="project-card" style="border:none; border-radius:0;">
+        <img src="assets/project-kia.webp" alt="Kia Motors" style="height: 160px; border-radius: 8px;">
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>RK Roofing PEB Pvt Ltd</span>
+    <span>07</span>
+  </div>
+</div>
+
+<!-- PAGE 8: CONTACT / BACK COVER -->
+<div class="page back-cover">
+  <div class="content" style="justify-content: center;">
+    <div class="footer-logo">
+      <div class="cover-logo" style="margin: 0 auto 20px;">RK</div>
+      <h2 style="font-size:24px;">RK ROOFING PEB PVT LTD</h2>
+      <p style="color:var(--cta); font-size:12px; letter-spacing:0.2em; text-transform:uppercase; margin-top:5px; font-weight:700;">Engineered Industrial Construction</p>
+    </div>
+    
+    <div class="contact-info" style="align-self: center; background: rgba(255,255,255,0.05); padding: 15mm; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); width: 80%;">
+      <div class="contact-item">
+        <i data-lucide="map-pin"></i>
+        <p>217, JK Dewasi Complex, Attur Main Road, Yelahanka New Town, Bengaluru, Karnataka 560064</p>
+      </div>
+      <div class="contact-item">
+        <i data-lucide="phone"></i>
+        <p>+91 98457 70392</p>
+      </div>
+      <div class="contact-item">
+        <i data-lucide="mail"></i>
+        <p>rkroofingpeb@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <i data-lucide="globe"></i>
+        <p>www.rkroofingpeb.com</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20mm; font-size: 10px; color: rgba(255,255,255,0.5);">
+      <p>Pan-India Execution &bull; 25+ Years Experience &bull; Uncompromising Quality</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  lucide.createIcons();
+</script>
+</body>
 </html>
