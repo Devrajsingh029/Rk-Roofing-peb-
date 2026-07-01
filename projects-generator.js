@@ -17,7 +17,7 @@ const projectsData = [
     buildingType: "Grade-A Logistics Park",
     status: "Completed",
     scope: [
-      "Pre-Engineered Building (PEB) design",
+      "Pre-Engineered Building (PEB) installation",
       "Structural steel fabrication",
       "High-bay frame erection",
       "Insulated metal roofing",
@@ -26,8 +26,8 @@ const projectsData = [
     ],
     desc: [
       "RK Roofing PEB Pvt Ltd successfully executed the high-bay warehouse construction for Horizon Logistics Park in Hosur, Tamil Nadu. The project involved erecting multiple PEB steel structures with insulated metal roofing systems and weather-tight wall cladding solutions.",
-      "The layout incorporates high clear-height frames designed to optimize internal racking arrangements for modern third-party logistics (3PL) operations. The metal sheeting utilizes premium anti-corrosive coatings suitable for long-term industrial weather resistance.",
-      "Our scope included complete coordination of foundations, design verification, site logistics planning, safety enforcement (EHS), and delivery on a strict schedule. This Grade-A facility meets the highest standards for commercial logistics hubs in India."
+      "The layout incorporates high clear-height frames built to optimize internal racking arrangements for modern third-party logistics (3PL) operations. The metal sheeting utilizes premium anti-corrosive coatings suitable for long-term industrial weather resistance.",
+      "Our scope included complete coordination of foundations, installation verification, site logistics planning, safety enforcement (EHS), and delivery on a strict schedule. This Grade-A facility meets the highest standards for commercial logistics hubs in India."
     ],
     highlights: [
       "Grade-A logistics park",
@@ -50,7 +50,7 @@ const projectsData = [
     buildingType: "Logistics Facility",
     status: "Completed",
     scope: [
-      "Complete PEB design",
+      "Complete PEB installation",
       "Fabrication & dispatch",
       "Steel superstructure erection",
       "Profile metal roofing",
@@ -58,13 +58,13 @@ const projectsData = [
       "Architectural wall cladding"
     ],
     desc: [
-      "Delivered a massive logistics warehousing facility for Welspun One Logistics Parks in Hosur. The scope of work encompassed advanced PEB design, steel frame fabrication, structural erection, and leak-free metal roofing sheets to meet Grade-A specifications.",
+      "Delivered a massive logistics warehousing facility for Welspun One Logistics Parks in Hosur. The scope of work encompassed advanced PEB installation, steel frame fabrication, structural erection, and leak-free metal roofing sheets to meet Grade-A specifications.",
       "Engineered with strict adherence to load requirements, this facility supports multiple dock levelers, heavy-duty floor slabs, and large transport movements. Double-layered thermal insulation was integrated to ensure temperature stability for stored inventory.",
-      "The design incorporates continuous ridge ventilators and daylight polycarbonate sheets, reducing energy costs while providing comfortable internal workspaces. Handover was completed within the tight milestone timelines set by the client."
+      "The installation incorporates continuous ridge ventilators and daylight polycarbonate sheets, reducing energy costs while providing comfortable internal workspaces. Handover was completed within the tight milestone timelines set by the client."
     ],
     highlights: [
       "Large-format warehouse",
-      "High-bay PEB design",
+      "High-bay PEB installation",
       "Schedule-driven delivery"
     ],
     mainImg: "welspun-one.webp",
@@ -120,8 +120,8 @@ const projectsData = [
       "Industrial sheet roofing"
     ],
     desc: [
-      "Executed in collaboration with Zamil Construction Pvt Ltd, this heavy industrial project involved the design and erection of a massive raw material storage yard shed at the JSW Cement plant in Nandyal. Features large clear-span frames engineered for high wind loads.",
-      "The warehouse was designed to contain bulk raw materials, preventing dust dispersion while protecting stock from rain. Erection of the massive truss spans required precise tandem crane operations and special rigging setups.",
+      "Executed in collaboration with Zamil Construction Pvt Ltd, this heavy industrial project involved the installation and erection of a massive raw material storage yard shed at the JSW Cement plant in Nandyal. Features large clear-span frames engineered for high wind loads.",
+      "The warehouse was built to contain bulk raw materials, preventing dust dispersion while protecting stock from rain. Erection of the massive truss spans required precise tandem crane operations and special rigging setups.",
       "High-grade anti-corrosive coatings were applied to all steel surfaces to prevent chemical wear and corrosion from cement dust. The building successfully meets all structural standards under the Indian Code (IS 875 and IS 800)."
     ],
     highlights: [
@@ -151,14 +151,14 @@ const projectsData = [
     buildingType: "Exhibition & Event Hangar",
     status: "Completed",
     scope: [
-      "Precision PEB structural design",
+      "Precision PEB structural installation",
       "Modular steel frame assembly",
       "Crane-assisted truss erection",
       "Weather-proof roof coverings"
     ],
     desc: [
       "Erected a premium, large-span structural steel event facility adjacent to the historic Bangalore Palace. The project required highly precise crane operations and strict EHS protocols to safeguard the heritage palace grounds while delivering a robust structure.",
-      "This semi-permanent structure features high aesthetic detailing to complement the surrounding palace architecture. The structural members are designed to be modular, allowing flexible interior layouts and heavy stage lighting integration.",
+      "This semi-permanent structure features high aesthetic detailing to complement the surrounding palace architecture. The structural members are built to be modular, allowing flexible interior layouts and heavy stage lighting integration.",
       "The roofing profile utilizes noise-dampening insulation layers to ensure sound isolation during high-profile events. The structure has successfully hosted international trade expos, royal weddings, and major corporate exhibitions."
     ],
     highlights: [
@@ -186,14 +186,14 @@ const projectsData = [
     buildingType: "Transit Facility",
     status: "Completed",
     scope: [
-      "Design and installation of curved metal roofing profiles",
+      "Fabrication and Installation of curved metal roofing profiles",
       "Double-locked standing seam sheet installation",
       "Architectural side cladding"
     ],
     desc: [
       "Delivered a curved metal roofing and side cladding package for the Bangalore Metro Rail Corporation (BMRCL) stations. Used weather-tight standing seam profiles engineered for heavy monsoons and high structural durability.",
       "The geometry of the metro platform roofs required custom-curved roll forming at the site to eliminate mid-lap joints, drastically reducing leakage risks. Special fall-protection netting and rigid anchor points were installed to ensure safe working conditions during overnight track-adjacent works.",
-      "Completed in alignment with the safety guidelines of the metro rail inspectors, the standing seam sheets allow thermal expansion and contraction without damaging the underlying structure, offering a lifetime design solution for urban transport."
+      "Completed in alignment with the safety guidelines of the metro rail inspectors, the standing seam sheets allow thermal expansion and contraction without damaging the underlying structure, offering a lifetime installation solution for urban transport."
     ],
     highlights: [
       "Curved metal roofing system",
@@ -224,7 +224,7 @@ const projectsData = [
     desc: [
       "A multi-storey commercial PEB building frame erected in Yelahanka, Bangalore. The project involved complex urban-site crane operations, high-rise column-and-beam connections, and tight tolerance alignments in a dense commercial zone.",
       "The structure uses composite deck slabs where profiled steel decking sheets act as a permanent shuttering and tensile reinforcement for the concrete floors. This significantly sped up the floor slab casting timeline compared to traditional RCC.",
-      "Precision-engineered primary columns were bolted with high-tensile fasteners under strict QC check. This structure is a prime example of structural steel design applied to high-density commercial office buildings in urban centers."
+      "Precision-engineered primary columns were bolted with high-tensile fasteners under strict QC check. This structure is a prime example of structural steel installation applied to high-density commercial office buildings in urban centers."
     ],
     highlights: [
       "Multi-storey PEB frame erection",
@@ -255,7 +255,7 @@ const projectsData = [
     ],
     desc: [
       "Constructed a state-of-the-art manufacturing plant for the Motherson Group in Pune, Maharashtra. The facility features a custom red-roof PEB framework with insulated wall cladding and trapezoidal profile sheeting matching the client's corporate branding.",
-      "The factory floor was designed to accommodate heavy robotic presses, injection molding machinery, and rapid material handling assembly lines. Custom portal frames were created to maximize unobstructed interior space for the machinery layout.",
+      "The factory floor was built to accommodate heavy robotic presses, injection molding machinery, and rapid material handling assembly lines. Custom portal frames were created to maximize unobstructed interior space for the machinery layout.",
       "Translucent daylight panels were integrated into the roof to reduce electrical dependency during day shifts, while the wall-integrated louver system provides continuous air exchange to maintain thermal comfort inside."
     ],
     highlights: [
@@ -317,8 +317,8 @@ const projectsData = [
     ],
     desc: [
       "A custom-engineered manufacturing facility for Ambient Controls in Chennai, Tamil Nadu. The project features translucent polycarbonate panels for natural daylighting, integrated louvered side-wall cladding for ventilation, and full rainwater gutters.",
-      "Built inside Chennai's high-humidity industrial belt, the facility utilizes premium rust-resistant fasteners and coated structural frames. The design features a continuous gutter network to channel heavy monsoon rainwater away safely.",
-      "The internal floor layout features anti-static concrete zones suitable for assembling electronic control panels. The building serves as a perfect blend of high-efficiency utility design and smart industrial architecture."
+      "Built inside Chennai's high-humidity industrial belt, the facility utilizes premium rust-resistant fasteners and coated structural frames. The installation features a continuous gutter network to channel heavy monsoon rainwater away safely.",
+      "The internal floor layout features anti-static concrete zones suitable for assembling electronic control panels. The building serves as a perfect blend of high-efficiency utility installation and smart industrial architecture."
     ],
     highlights: [
       "Industrial facility with louvered ventilation",
@@ -341,7 +341,7 @@ const projectsData = [
     buildingType: "Aviation Hangar & Clean-Room Frame",
     status: "Completed",
     scope: [
-      "High-precision PEB steel design",
+      "High-precision PEB steel installation",
       "Heavy-duty structural column erection",
       "Overhead crane support runway beams",
       "Primary trusses",
@@ -349,13 +349,13 @@ const projectsData = [
     ],
     desc: [
       "A high-precision structural steel PEB hangar framework executed for Dynamatic Technologies' Aerospace division near Bengaluru International Airport in Devanahalli. Features complex primary columns and crane girders to house heavy aviation component assembly.",
-      "The engineering team maintained extremely low structural tolerances to support multi-ton overhead cranes. The design includes deep trusses with clean clearance zones to facilitate large aircraft component transport inside the hangar.",
+      "The engineering team maintained extremely low structural tolerances to support multi-ton overhead cranes. The installation includes deep trusses with clean clearance zones to facilitate large aircraft component transport inside the hangar.",
       "High-durability fire-retardant paints and epoxies were applied to all steelwork. This specialized facility highlights RK Roofing PEB's capability to deliver state-of-the-art industrial infrastructure for high-precision global technology companies."
     ],
     highlights: [
       "Aerospace manufacturing facility",
       "Heavy structural steel mainframe",
-      "Large clear-span design"
+      "Large clear-span installation"
     ],
     mainImg: "dynamatic-technologies-aerospace-facility-devanahalli-1.jpg",
     gallery: [
@@ -387,7 +387,7 @@ const projectsData = [
       "Colored profile side-wall cladding"
     ],
     desc: [
-      "Delivered a double-height packaging manufacturing warehouse for Ficus Pax (a UFP Industries company) in Hoskote, Bangalore. The structure combines a red-and-white pre-painted profile wall cladding design, daylight panels, and a heavy-duty industrial concrete floor layout.",
+      "Delivered a double-height packaging manufacturing warehouse for Ficus Pax (a UFP Industries company) in Hoskote, Bangalore. The structure combines a red-and-white pre-painted profile wall cladding installation, daylight panels, and a heavy-duty industrial concrete floor layout.",
       "The double-height column spacing allows maximum vertical stacking for inventory storage, optimizing space usage for heavy logistics. Thermal-insulated roofing panels were chosen to improve energy efficiency within the packaging lines.",
       "Safety systems such as fire hydrants and electrical cable tray supports were fully integrated into the secondary PEB framework during erection, ensuring rapid commissioning of manufacturing equipment upon structural completion."
     ],
