@@ -345,6 +345,7 @@ main [style*="text-align: center"] p,
 
 /* --- NEW SERVICES GRID LAYOUT --- */
 .services-multi-grid {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -371,6 +372,26 @@ main [style*="text-align: center"] p,
     .services-multi-grid > * {
         flex: 1 1 calc(100% - 1.5rem);
         max-width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+@media (max-width: 1200px) {
+    .services-multi-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 992px) {
+    .services-multi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    .services-multi-grid {
+        grid-template-columns: 1fr;
+
     }
 }
 
@@ -383,10 +404,14 @@ main [style*="text-align: center"] p,
     box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
     display: flex;
     flex-direction: column;
+
 }
 .svc-card > .btn-cta, .svc-card > .btn-outline, .svc-card > .btn-outline-light, .svc-card > a.explore-link {
     margin-top: auto;
     align-self: flex-start;
+
+    height: 100%;
+
 }
 .svc-card:hover {
     transform: translateY(-5px);
@@ -442,6 +467,10 @@ main [style*="text-align: center"] p,
 .home-service-card {
     display: flex;
     flex-direction: column;
+
+
+    height: 100%;
+
 }
 .home-service-card p {
     flex-grow: 1;
