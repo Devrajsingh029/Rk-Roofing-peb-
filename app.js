@@ -28,9 +28,16 @@ function renderFooter(){const isSub=location.pathname.includes('/projects/') || 
           <li><a href="${prefix}faq.html">FAQ</a></li>
         </ul></div>
         <div><h3>Services</h3><ul>
-          <li><a href="${prefix}services/peb-erection-installation.html">PEB Erection & Installation</a></li><li><a href="${prefix}services/roofing-services.html">Industrial Roofing</a></li><li><a href="${prefix}services/structural-steel-erection.html">Structural Steel Erection</a></li>
-          <li><a href="${prefix}services/wall-cladding-services.html">Wall Cladding Services</a></li><li><a href="${prefix}services/insulated-panel-services.html">Insulated Panel Services</a></li><li><a href="${prefix}services/standing-seam-kalzip-roofing.html">Standing Seam & Kalzip Roofing</a></li>
-          <li><a href="${prefix}services/airport-aircraft-hangars.html">Airport Aircraft Hangars</a></li><li><a href="${prefix}services/cold-storage-facilities.html">Cold Storage Facilities</a></li>
+                    <li><a href="${prefix}peb-construction.html">PEB Services</a></li>
+          <li><a href="${prefix}industrial-roofing-services.html">Roofing Services</a></li>
+          <li><a href="${prefix}standing-seam-roofing.html">Standing Seam & Kalzip Roofing</a></li>
+          <li><a href="${prefix}cladding-solutions-services.html">Wall Cladding Services</a></li>
+          <li><a href="${prefix}insulated-panel-services.html">Insulated Panel Services</a></li>
+          <li><a href="${prefix}warehouse-construction-services.html">Cold Room & Cold Storage Panels</a></li>
+          <li><a href="${prefix}structural-steel-erection-services.html">Mezzanine Floor Services</a></li>
+          <li><a href="${prefix}flashing-gutters.html">Flashing, Gutters & Downpipes</a></li>
+          <li><a href="${prefix}insulation-skylights.html">Insulation & Skylights</a></li>
+          <li><a href="${prefix}maintenance-repair.html">Maintenance & Repair Services</a></li>
         </ul></div>
         <div><h3>Contact</h3><ul>
           <li style="display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--cta);width:16px;height:16px;display:inline-block;margin-top:2px;">${icon('phone').replace('width="24" height="24"','width="16" height="16"')}</span><a href="tel:+919845770392">+91 98457 70392</a></li>

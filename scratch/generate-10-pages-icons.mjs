@@ -1,0 +1,168 @@
+import fs from 'fs';
+
+const pagesData = {
+  'peb-construction.html': {
+    title: 'PEB Services',
+    cards: [
+      { icon: "warehouse", title: "PEB Erection & Installation", desc: "Professional installation and on-site erection of pre-engineered building components for industrial, warehouse, and commercial structures." },
+      { icon: "hard", title: "Steel Structure Erection", desc: "Accurate assembly and installation of structural steel members using proper alignment, bolted connections, and safe execution practices." },
+      { icon: "factory", title: "Industrial Building Installation", desc: "Installation of steel buildings for factories, manufacturing units, warehouses, and industrial facilities." },
+      { icon: "building", title: "Commercial Building Installation", desc: "Installation of steel structures for commercial facilities with durable roofing, cladding, and structural systems." },
+      { icon: "warehouse", title: "Warehouse Structure Erection", desc: "Construction and erection of warehouse steel frameworks designed for storage and logistics applications." }
+    ]
+  },
+  'industrial-roofing-services.html': {
+    title: 'Roofing Services',
+    cards: [
+      { icon: "home", title: "Industrial Roofing Installation", desc: "Professional installation of industrial roofing systems for warehouses, factories, and commercial buildings, ensuring durable weather protection, structural reliability, and long-term performance." },
+      { icon: "building", title: "Commercial Roofing Installation", desc: "Expert application of metal roofing solutions for commercial properties, delivering secure fastening, leak-free detailing, and excellent weather resistance." },
+      { icon: "layers", title: "Metal Roofing Systems", desc: "Installation of high-performance metal roof sheets using concealed or exposed fasteners, built to withstand heavy rainfall and high wind loads." },
+      { icon: "layers", title: "Roof Sheet Installation", desc: "Precise alignment and fastening of roofing sheets, ensuring proper overlap, secure fixing, and long-lasting structural integrity." },
+      { icon: "warehouse", title: "Industrial Shed Roofing", desc: "Specialized roofing erection for factory sheds, incorporating robust materials and expert sealing techniques for optimal facility protection." },
+      { icon: "wrench", title: "Roofing Maintenance & Repair", desc: "Professional inspection, leak rectification, and preventive maintenance of existing metal roofs to extend their lifespan and ensure continuous protection." }
+    ]
+  },
+  'standing-seam-roofing.html': {
+    title: 'Standing Seam & Kalzip Roofing',
+    cards: [
+      { icon: "layers", title: "Standing Seam Roofing System", desc: "Installation of concealed-fix standing seam roofs, mechanically seamed on-site to eliminate exposed fasteners and provide ultimate leak-proof performance." },
+      { icon: "package", title: "Kalzip Roofing System", desc: "Expert erection of premium Kalzip aluminium roofing systems, offering superior weather resistance, long-length continuous sheets, and exceptional durability." },
+      { icon: "home", title: "Curved Roofing Systems", desc: "Specialized installation of curved metal roof profiles, precisely aligned and fastened to suit unique structural geometries and industrial requirements." },
+      { icon: "shield", title: "High-Performance Roofing Solutions", desc: "Execution of advanced roofing systems engineered for extreme weather zones, ensuring maximum structural stability and water-tightness." }
+    ]
+  },
+  'cladding-solutions-services.html': {
+    title: 'Wall Cladding Services',
+    cards: [
+      { icon: "package", title: "Wall Cladding Installation", desc: "Installation of metal wall cladding systems that improve weather protection, durability, and the external finish of industrial and commercial buildings." },
+      { icon: "factory", title: "Industrial Cladding Systems", desc: "Robust installation of profiled metal wall sheets for factories, ensuring secure attachment, proper sealing, and long-lasting performance." },
+      { icon: "building", title: "Commercial Cladding Systems", desc: "Precision erection of architectural wall cladding for commercial facilities, delivering clean lines, secure joints, and excellent weather resistance." },
+      { icon: "layers", title: "Metal Cladding Solutions", desc: "Expert application of steel and aluminium cladding panels, providing enhanced structural protection and a durable exterior shell." },
+      { icon: "layers", title: "Roof & Wall Cladding Works", desc: "Comprehensive installation of both roofing and wall cladding components, delivering a fully sealed, weather-tight industrial envelope." }
+    ]
+  },
+  'insulated-panel-services.html': {
+    title: 'Insulated Panel Services',
+    cards: [
+      { icon: "package", title: "PUF Insulated Panel Installation", desc: "Professional installation of Polyurethane Foam (PUF) panels for walls and roofs, ensuring precise joints, thermal efficiency, and structural stability." },
+      { icon: "layers", title: "Sandwich Panel Installation", desc: "Expert erection of composite sandwich panels, providing superior insulation, rapid on-site assembly, and robust weather protection." },
+      { icon: "window", title: "Insulated Wall Panels", desc: "Secure fastening of insulated metal panels for industrial walls, delivering seamless alignment and excellent temperature control capabilities." },
+      { icon: "home", title: "Insulated Roof Panels", desc: "Installation of insulated roofing systems with specialized concealed fasteners, ensuring leak-free performance and high thermal resistance." }
+    ]
+  },
+  'warehouse-construction-services.html': {
+    title: 'Cold Room & Cold Storage Panels',
+    cards: [
+      { icon: "snowflake", title: "Cold Room Panel Installation", desc: "Precision assembly of insulated panels for cold rooms, ensuring airtight joints, thermal integrity, and secure structural fastening." },
+      { icon: "snowflake", title: "Cold Storage Panel Installation", desc: "Large-scale erection of insulated wall and roof panels for cold storage facilities, maintaining strict temperature-controlled environments." },
+      { icon: "gauge", title: "Temperature-Controlled Panel Systems", desc: "Expert installation of high-performance insulated enclosures, delivering seamless connections and optimized thermal protection for sensitive industrial operations." }
+    ]
+  },
+  'structural-steel-erection-services.html': {
+    title: 'Mezzanine Floor Services',
+    cards: [
+      { icon: "layers", title: "Mezzanine Floor Installation", desc: "Professional erection of structural steel mezzanine floors, ensuring high load capacity, stable connections, and efficient space utilization." },
+      { icon: "building", title: "Industrial Mezzanine Structures", desc: "Heavy-duty installation of mezzanine platforms for factories, using precision-aligned steel beams and robust decking systems." },
+      { icon: "layers", title: "Commercial Mezzanine Floors", desc: "Secure assembly of steel mezzanine levels for commercial spaces, delivering accurate leveling and strong structural integration." },
+      { icon: "hard", title: "Steel Mezzanine Platforms", desc: "Expert fabrication and field erection of elevated steel platforms, built to exact specifications for safe industrial access." }
+    ]
+  },
+  'flashing-gutters.html': {
+    title: 'Flashing, Gutters & Downpipes',
+    cards: [
+      { icon: "zap", title: "Flashing Installation", desc: "Precise cutting, bending, and installation of metal flashings at ridges, eaves, and penetrations to guarantee a watertight roofing system." },
+      { icon: "droplet", title: "Gutter Installation", desc: "Expert fitting of eave and valley gutters, ensuring proper slope, secure brackets, and efficient rainwater collection." },
+      { icon: "droplet", title: "Downpipe Installation", desc: "Secure attachment of uPVC or metal downpipes, correctly aligned to handle high-capacity water drainage from industrial roofs." },
+      { icon: "cloud-rain", title: "Rainwater Drainage Systems", desc: "Complete installation of integrated roof drainage components, preventing water accumulation and ensuring rapid runoff during heavy monsoons." }
+    ]
+  },
+  'insulation-skylights.html': {
+    title: 'Insulation & Skylights',
+    cards: [
+      { icon: "shield", title: "Roof Insulation Installation", desc: "Professional application of glass wool or bubble wrap insulation beneath metal roofing, properly tensioned and secured for maximum thermal performance." },
+      { icon: "flame", title: "Thermal Insulation Systems", desc: "Expert installation of industrial insulation materials, minimizing heat transfer and improving energy efficiency within large facilities." },
+      { icon: "sun", title: "Skylight Installation", desc: "Secure fitting of polycarbonate skylight sheets, ensuring leak-proof sealing, accurate overlapping, and optimal natural daylight transmission." },
+      { icon: "sun", title: "Natural Daylighting Solutions", desc: "Installation of translucent roof panels, correctly integrated with metal sheets to provide reliable illumination without compromising roof integrity." }
+    ]
+  },
+  'maintenance-repair.html': {
+    title: 'Maintenance & Repair Services',
+    cards: [
+      { icon: "wrench", title: "PEB Maintenance", desc: "Systematic inspection and structural maintenance of pre-engineered buildings, ensuring bolt tightening, alignment checks, and long-term stability." },
+      { icon: "hammer", title: "Roofing Repairs", desc: "Expert rectification of damaged or rusted metal roofing sheets, restoring weather-tightness and preventing structural degradation." },
+      { icon: "hammer", title: "Cladding Repairs", desc: "Professional replacement and realignment of damaged wall cladding panels, ensuring secure fastening and continuous protection." },
+      { icon: "search", title: "Leak Detection & Rectification", desc: "Thorough identification and repair of roof leaks, utilizing advanced sealing techniques, butyl tapes, and flashing replacements." },
+      { icon: "shield", title: "Preventive Maintenance", desc: "Scheduled industrial maintenance services, proactively addressing potential structural or roofing issues before they cause operational disruptions." },
+      { icon: "cog", title: "Renovation & Retrofit Services", desc: "Expert upgrading of existing industrial facilities, including structural reinforcements, roof replacements, and cladding modernizations." }
+    ]
+  }
+};
+
+let indexHTML = fs.readFileSync('index.html', 'utf8');
+const headMatch = indexHTML.match(/<head>[\s\S]*?<\/head>/i);
+let baseHeadHTML = headMatch ? headMatch[0] : '<head><meta charset="UTF-8"></head>';
+
+for (const [file, data] of Object.entries(pagesData)) {
+  let gridsHTML = '';
+  for (const card of data.cards) {
+    // IMPORTANT: Use svc-icon-wrapper to exactly match homepage!
+    gridsHTML += `
+            <div class="card-premium card-pad" style="display:flex;flex-direction:column;height:100%; background: white;">
+              <div class="svc-icon-wrapper"><div data-icon="${card.icon}" data-size="28"></div></div>
+              <h3 class="h-card">${card.title}</h3>
+              <p style="color:#0f172aa6;margin-top:.75rem;font-size:14px;line-height:1.7;flex-grow:1">
+                ${card.desc}
+              </p>
+            </div>`;
+  }
+
+  let customizedHead = baseHeadHTML.replace(/<title>.*?<\/title>/i, `<title>${data.title} | RK Roofing PEB</title>`);
+  customizedHead = customizedHead.replace(/<meta name="description" content=".*?"/i, `<meta name="description" content="${data.title} services offered by RK Roofing PEB."`);
+  customizedHead = customizedHead.replace(/<link rel="canonical" href=".*?"/i, `<link rel="canonical" href="https://rkroofingpeb.com/${file}"`);
+
+  const newHTML = `<!doctype html>
+<html lang="en">
+  ${customizedHead}
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="rk-header"></div>
+    <main id="main-content">
+      <!-- Minimal Header -->
+      <section style="padding: 8rem 0 4rem; text-align: center; background: linear-gradient(to bottom, #0f172a, #1e293b); color: white;">
+        <div class="container-x">
+          <!-- BREADCRUMB -->
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+            <ol class="breadcrumb-list" style="justify-content: center;">
+              <li><a href="index.html" style="color: #cbd5e1;">Home</a></li>
+              <li><a href="services.html" style="color: #cbd5e1;">Services</a></li>
+              <li aria-current="page" style="color: white;">${data.title}</li>
+            </ol>
+          </nav>
+          <h1 class="h-display" style="color: white; margin-bottom: 1rem;">${data.title}</h1>
+        </div>
+      </section>
+
+      <!-- SERVICES INCLUDED GRIDS -->
+      <section class="section" style="background: #f9fafb; padding: 5rem 0;">
+        <div class="container-x">
+          <!-- The exactly matched Services Included heading -->
+          <div style="text-align: center; max-width: 48rem; margin: 0 auto 3.5rem">
+            <span class="eyebrow">${data.title}</span>
+            <h2 class="h-section" style="margin-top: 1rem">
+              Services Included
+            </h2>
+          </div>
+
+          <div class="grid-cards gc-3">
+${gridsHTML}
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="rk-footer"></div>
+  </body>
+</html>`;
+
+  fs.writeFileSync(file, newHTML, 'utf8');
+  console.log(`Regenerated ${file} with correct icons and heading`);
+}
