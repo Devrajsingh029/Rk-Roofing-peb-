@@ -558,3 +558,124 @@ main [style*="text-align: center"] p,
     opacity: 1;
     margin-top: 0.75rem;
 }
+
+/* --- PARTNERS MARQUEE & STYLES --- */
+#partners {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(#f6f8fd, #fff);
+}
+#partners .head {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 3.5rem;
+}
+#partners .head .eyebrow-row {
+  color: var(--primary);
+  align-items: center;
+  gap: 0.85rem;
+  display: inline-flex;
+}
+#partners .head .eyebrow-row:before,
+#partners .head .eyebrow-row:after {
+  content: "";
+  background: var(--primary);
+  width: 30px;
+  height: 2px;
+  display: block;
+}
+#partners .head .eyebrow {
+  color: var(--primary);
+}
+#partners h2 {
+  color: var(--foreground);
+  margin-top: 1rem;
+  font-family: Montserrat;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+#partners .sub {
+  color: #0f172aa6;
+  margin-top: 1rem;
+  line-height: 1.75;
+}
+.marquee {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, #0000, #000 8% 92%, #0000);
+  mask-image: linear-gradient(90deg, #0000, #000 8% 92%, #0000);
+}
+.marquee-track {
+  gap: 1.5rem;
+  width: max-content;
+  animation: 38s linear infinite rk-marquee;
+  display: flex;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes rk-marquee {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}
+.partner-card {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 0.75rem;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  min-width: 240px;
+  height: 120px;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  display: flex;
+  box-shadow: 0 1px 2px #0f172a0a, 0 10px 30px -18px #0f172a1f;
+}
+.partner-card:hover {
+  border-color: #1e2a7859;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px -22px #1e2a7840;
+}
+.partner-logo {
+  object-fit: contain;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  max-height: 96px;
+  display: block;
+  margin: 0 auto;
+}
+.partner-name {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.partner-card .mark {
+  background: var(--cta);
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.7rem;
+  display: inline-block;
+}
+
+/* === ACCESSIBILITY: REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused !important; }
+  .animate-fade-in { animation: none !important; opacity: 1 !important; }
+  .reveal-up { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .card-premium, .partner-card, .rk-float-btn, .btn-glow { transition: none !important; }
+}
+

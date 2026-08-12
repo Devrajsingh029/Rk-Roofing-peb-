@@ -28,6 +28,7 @@ const rootFiles = [
   "sitemap.xml",
   "_headers",
   "_redirects",
+  "RK_Roofing_Corporate_Catalogue.pdf",
 ];
 for (const f of rootFiles) {
   const src = resolve(root, f);

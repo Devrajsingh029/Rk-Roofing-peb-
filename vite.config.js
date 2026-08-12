@@ -25,6 +25,18 @@ if (existsSync(projectsDir)) {
   }
 }
 
+// Scan services/ HTML files if they exist
+const servicesDir = resolve(__dirname, "services");
+if (existsSync(servicesDir)) {
+  const serviceHtmlFiles = readdirSync(servicesDir).filter(
+    (file) => extname(file) === ".html"
+  );
+  for (const file of serviceHtmlFiles) {
+    const name = `services/${basename(file, ".html")}`;
+    input[name] = resolve(servicesDir, file);
+  }
+}
+
 export default defineConfig({
   root: ".",
   publicDir: false,
