@@ -114,6 +114,8 @@ img,svg,video{max-width:100%;height:auto}
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  flex-shrink:0;
+  margin-right:.5rem;
   padding:0;
   border-radius:0;
   background:transparent;
@@ -127,10 +129,11 @@ img,svg,video{max-width:100%;height:auto}
   align-items:center;
   justify-content:center;
   width:auto;
-  height:86px;
-  min-height:86px;
-  max-width:320px;
+  height:68px;
+  min-height:68px;
+  max-width:180px;
   padding:0;
+  flex-shrink:0;
 }
 .brand-logo-frame--footer{
   height:180px;
@@ -150,15 +153,22 @@ img,svg,video{max-width:100%;height:auto}
   will-change:transform;
   image-rendering:auto;
 }
+.brand-logo-img--header{
+  max-height:68px;
+  width:auto;
+}
 .site-header .brand:hover .brand-logo-img,
 .brand-logo-frame--footer:hover .brand-logo-img{
   transform:scale(1.03);
 }
 @media(max-width:1023px){
   .brand-logo-frame{
-    height:76px;
-    min-height:76px;
-    max-width:280px;
+    height:60px;
+    min-height:60px;
+    max-width:160px;
+  }
+  .brand-logo-img--header{
+    max-height:60px;
   }
   .brand-logo-frame--footer{
     height:156px;
@@ -167,9 +177,12 @@ img,svg,video{max-width:100%;height:auto}
 }
 @media(max-width:640px){
   .brand-logo-frame{
-    height:68px;
-    min-height:68px;
-    max-width:240px;
+    height:52px;
+    min-height:52px;
+    max-width:140px;
+  }
+  .brand-logo-img--header{
+    max-height:52px;
   }
   .brand-logo-frame--footer{
     height:128px;
@@ -679,3 +692,68 @@ main [style*="text-align: center"] p,
   .card-premium, .partner-card, .rk-float-btn, .btn-glow { transition: none !important; }
 }
 
+.site-header .row {
+  height: 140px;
+}
+.brand-logo-frame {
+  height: 120px;
+  min-height: 120px;
+  max-width: 330px;
+}
+.brand-logo-img--header {
+  max-height: 120px;
+}
+@media (min-width: 1440px) {
+  .site-header .row {
+    height: 140px !important;
+  }
+  .site-header .brand .brand-logo-img {
+    max-height: 120px !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .brand-logo-frame {
+    max-width: 275px;
+  }
+  .brand-logo-img--header {
+    max-height: 110px;
+  }
+  .nav {
+    gap: 1.5rem;
+  }
+  .hdr-socials {
+    gap: 0.75rem;
+  }
+}
+@media (max-width: 1023px) {
+  .site-header .row {
+    height: 104px !important;
+  }
+  main#main-content {
+    padding-top: 104px !important;
+  }
+  .brand-logo-frame {
+    height: 92px;
+    min-height: 92px;
+    max-width: 280px;
+  }
+  .brand-logo-img--header {
+    max-height: 92px;
+  }
+}
+@media (max-width: 640px) {
+  .site-header .row {
+    height: 80px !important;
+  }
+  main#main-content {
+    padding-top: 80px !important;
+  }
+  .brand-logo-frame {
+    height: 64px;
+    min-height: 64px;
+    max-width: 220px;
+  }
+  .brand-logo-img--header {
+    max-height: 64px;
+  }
+}

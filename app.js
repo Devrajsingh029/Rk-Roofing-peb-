@@ -5,11 +5,7 @@ function renderHeader(){const cur=currentPage();const isSub=location.pathname.in
       <div class="container-x row">
         <a href="${prefix}index.html" class="brand brand--logo" aria-label="RK Roofing PEB Home">
           <span class="brand-logo-frame" aria-hidden="true">
-            <picture>
-              <source srcset="${prefix}assets/logo.avif" type="image/avif">
-              <source srcset="${prefix}assets/logo.webp" type="image/webp">
-              <img src="${prefix}assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img" decoding="async" width="400" height="120">
-            </picture>
+            <img src="${prefix}assets/rk-roofing-logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img brand-logo-img--header" decoding="async" loading="eager" fetchpriority="high" width="1981" height="794">
           </span>
         </a>
         <nav class="nav" aria-label="Main">${links}</nav>
@@ -26,11 +22,7 @@ function renderFooter(){const isSub=location.pathname.includes('/projects/') || 
         <div>
           <a href="${prefix}index.html" class="brand" style="margin-bottom:1.25rem;">
             <span class="brand-logo-frame brand-logo-frame--footer" aria-hidden="true">
-              <picture>
-                <source srcset="${prefix}assets/logo.avif" type="image/avif">
-                <source srcset="${prefix}assets/logo.webp" type="image/webp">
-                <img src="${prefix}assets/logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img brand-logo-img--footer" loading="lazy" decoding="async" width="400" height="120">
-              </picture>
+              <img src="${prefix}assets/rk-roofing-logo.png" alt="RK Roofing PEB - Official Company Logo" class="brand-logo-img brand-logo-img--footer" loading="lazy" decoding="async" width="1981" height="794">
             </span>
           </a>
           <p style="font-size:14px;color:rgba(213,225,255,.8);line-height:1.7;">Trusted partner for premium PEB roofing, industrial steel structures, and warehouse construction across India.</p>
@@ -295,5 +287,3 @@ const fbtns=document.querySelectorAll('.filter-btn');if(fbtns.length){fbtns.forE
     document.addEventListener('DOMContentLoaded',()=>setTimeout(init,0));
   } else { setTimeout(init,0); }
 })();
-
-
